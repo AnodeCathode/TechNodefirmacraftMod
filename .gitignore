@@ -48,3 +48,7 @@ runServer/
 .settings/
 libs/
 bin/
+.gradle/
+.settings/
+.classpath
+.project
