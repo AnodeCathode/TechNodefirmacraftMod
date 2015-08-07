@@ -1,0 +1,21 @@
+{
+    "modListVersion": 2,
+    "modList": [{
+        "modid": "TechNodefirmacraft",
+        "name": "TechNodefirmacraft",
+        "description": "§bProvides ore names and textures for custom items.",
+        "version": "${mod_version}",
+        "mcversion": "${minecraft_version}",
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["§6AnodeCathode§r"],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "parent": "",
+        "requiredMods": [required-after:terrafirmacraft],
+        "dependencies": [  ],
+        "dependants": [  ],
+        "useDependencyInformation": "true"
+    }]
+}
