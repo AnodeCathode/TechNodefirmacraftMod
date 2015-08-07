@@ -1,6 +1,5 @@
-TFC Template Mod
-================
+TechNodefirmacraft Mod
 
-For use within the TerraFirmaCraft v79 mod for Minecraft.
+Mostly textures and item renames.
 
-This mod adds additional functionality to the TerraFirmaCraft mod.
+For use with the TechNodefirmacraft modpack.
