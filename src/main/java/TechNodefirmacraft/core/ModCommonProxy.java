@@ -107,4 +107,9 @@ public class ModCommonProxy
 	public void uploadKeyBindingsToGame()
 	{
 	}
+
+	public void registerMenuItems() {
+
+		
+	}
 }

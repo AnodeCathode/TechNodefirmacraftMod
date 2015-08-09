@@ -8,14 +8,14 @@
         "mcversion": "${minecraft_version}",
         "url": "",
         "updateUrl": "",
-        "authorList": ["§6AnodeCathode§r"],
+        "authorList": ["§6AnodeCathode§r,§6Bunsan§r"],
         "credits": "",
         "logoFile": "",
         "screenshots": [],
         "parent": "",
-        "requiredMods": [required-after:terrafirmacraft],
-        "dependencies": [  ],
-        "dependants": [  ],
-        "useDependencyInformation": "true"
+        "requiredMods": [],
+        "dependencies": [],
+        "dependants": [],
+        "useDependencyInformation": "false"
     }]
 }

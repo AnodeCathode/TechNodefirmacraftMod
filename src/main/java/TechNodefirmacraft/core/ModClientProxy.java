@@ -98,4 +98,11 @@ public class ModClientProxy extends ModCommonProxy
 	public void uploadKeyBindingsToGame()
 	{
 	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerMenuItems() {
+		ModMenu.initialise();
+
+	}
 }

@@ -29,7 +29,10 @@ public class TechNodefirmacraft
 {
 	@Instance(ModDetails.ModID)
 	public static TechNodefirmacraft instance;
-
+	public static final String AssetPath = "/assets/" + ModDetails.ModID + "/";
+	public static final String AssetPathGui = "textures/gui/";
+	public static final String AssetPathMenu = "textures/menu/";
+	
 	@SidedProxy(clientSide = ModDetails.CLIENT_PROXY_CLASS, serverSide = ModDetails.SERVER_PROXY_CLASS)
 	public static ModCommonProxy proxy;
 	
@@ -60,6 +63,8 @@ public class TechNodefirmacraft
 		proxy.registerTileEntities(true);
 		// Register Sound Handler (Client only)
 		proxy.registerSoundHandler();
+		// Register Menu Items (Client only)
+		proxy.registerMenuItems();
 		
 		ModItems.initialise();
 		
