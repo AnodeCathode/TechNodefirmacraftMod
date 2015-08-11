@@ -10,6 +10,7 @@ public class ModMenu {
 	public static ResourceLocation butModTitle = new ResourceLocation(ModDetails.ModID, TechNodefirmacraft.TechNodefirmacraft.AssetPathMenu + "technodefirmacraft.png");
 	public static ResourceLocation butTFCPower = new ResourceLocation(ModDetails.ModID, TechNodefirmacraft.TechNodefirmacraft.AssetPathMenu + "tfcpower.png");
 	public static ResourceLocation menuBackground = new ResourceLocation(ModDetails.ModID, TechNodefirmacraft.TechNodefirmacraft.AssetPathMenu + "background.png");
+	public static ResourceLocation iconTechNode = new ResourceLocation(ModDetails.ModID, TechNodefirmacraft.TechNodefirmacraft.AssetPathMenu + "technode.png");
 
 	
 	public static void initialise()
