@@ -33,7 +33,5 @@ public class PlayerInteractHandler {
 				}
 			}
 		}
-		System.out.println("[" + ModDetails.ModName + "] Done Registering Items");	
-		
 	}
 }
