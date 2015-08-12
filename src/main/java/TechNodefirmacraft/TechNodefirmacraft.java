@@ -86,7 +86,7 @@ public class TechNodefirmacraft
 		// Register the tool classes
 		proxy.registerToolClasses();
 		
-		// Register Player Interact Handler - for drinking water & item pickups.
+		// Register Player Interact Handler
 		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandler());
 
 

@@ -1,6 +1,6 @@
 package TechNodefirmacraft.handlers;
 
-import TechNodefirmacraft.core.ModDetails;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.Block;
 import com.bioxx.tfc.api.TFCBlocks;
