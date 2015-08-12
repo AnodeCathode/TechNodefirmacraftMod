@@ -11,9 +11,11 @@ import TechNodefirmacraft.core.ModRecipes;
 import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
 import TechNodefirmacraft.handlers.CraftingHandler;
+import TechNodefirmacraft.handlers.PlayerInteractHandler;
 import TechNodefirmacraft.handlers.network.InitClientWorldPacket;
 
 import com.bioxx.tfc.TerraFirmaCraft;
+
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -83,6 +85,10 @@ public class TechNodefirmacraft
 		
 		// Register the tool classes
 		proxy.registerToolClasses();
+		
+		// Register Player Interact Handler - for drinking water & item pickups.
+		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandler());
+
 
 		// Register Crafting Handler
 		FMLCommonHandler.instance().bus().register(new CraftingHandler());
