@@ -9,6 +9,7 @@ item.Ore.Olivine.name=Apatite
 item.Ore.Selenite.name=Scapolite
 item.Ore.Serpentine.name=Bauxite
 item.Ore.Sulfur.name=Strontium
+item.Ore.Satinspar.name=Scheelite
 
 
 #== Ore Blocks ==
@@ -17,3 +18,4 @@ tile.Ore.Olivine.name=Apatite
 tile.Ore.Satinspar.name=Scheelite
 tile.Ore.Selenite.name=Scapolite
 tile.Ore.Sulfur.name=Strontium
+tile.Ore.Satinspar.name=Scheelite
