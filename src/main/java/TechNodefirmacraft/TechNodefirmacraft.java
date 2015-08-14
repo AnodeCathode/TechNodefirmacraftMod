@@ -3,7 +3,6 @@ package TechNodefirmacraft;
 import java.io.File;
 
 import net.minecraftforge.common.MinecraftForge;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -20,6 +19,7 @@ import TechNodefirmacraft.core.ModBlocks;
 import TechNodefirmacraft.core.ModCommonProxy;
 import TechNodefirmacraft.core.ModDetails;
 import TechNodefirmacraft.core.ModItems;
+import TechNodefirmacraft.core.ModOreDictionary;
 import TechNodefirmacraft.core.ModRecipes;
 import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
@@ -102,7 +102,7 @@ public class TechNodefirmacraft
 		
 		// Register all the render stuff for the client
 		proxy.registerRenderInformation();
-
+		ModOreDictionary.register();
 		ModRecipes.initialise();
 		
 		// Register WAILA classes
