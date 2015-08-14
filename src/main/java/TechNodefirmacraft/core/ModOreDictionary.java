@@ -215,15 +215,17 @@ public class ModOreDictionary {
 		//DecorationsTFC
 		if (Loader.isModLoaded("DecorationsTFC")) {
 			//CREATION of Ore Dictionary Entry for basicLanterCore for crafting of Railcraft Lanterns
-			OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Copper"), 1, WILD));
-			OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Bronze"), 1, WILD));
-			OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.BismuthBronze"), 1, WILD));
-			OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.BlackBronze"), 1, WILD));
-			//# CREATION of Ore Dictionary Entry copperLanternCore for crafting of Railcraft Lanterns
-			OreDictionary.registerOre("copperLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Copper"), 1, WILD));
-			OreDictionary.registerOre("goldLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Gold"), 1, WILD));
-			OreDictionary.registerOre("leadLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Lead"), 1, WILD));
-			OreDictionary.registerOre("ironLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.WroughtIron"), 1, WILD));
+			for (int i=1; i<9; i++) {
+				OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Copper"), 1, i));
+				OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Bronze"), 1, i));
+				OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.BismuthBronze"), 1, i));
+				OreDictionary.registerOre("basicLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.BlackBronze"), 1, i));
+				//# CREATION of Ore Dictionary Entry copperLanternCore for crafting of Railcraft Lanterns
+				OreDictionary.registerOre("copperLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Copper"), 1, i));
+				OreDictionary.registerOre("goldLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Gold"), 1, i));
+				OreDictionary.registerOre("leadLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.Lead"), 1, i));
+				OreDictionary.registerOre("ironLanternCore", new ItemStack(GameData.getItemRegistry().getObject("DecorationsTFC:item.LanternCore.WroughtIron"), 1, i));	
+			}
 		}
 		
 		//Forestry
