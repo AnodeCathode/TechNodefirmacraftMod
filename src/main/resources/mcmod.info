@@ -3,9 +3,9 @@
 	"modList": [{
 		"modid": "technodefirmacraft",
 		"name": "TechNodefirmacraft",
-		"description": "§bProvides ore names and textures for custom items.",
-		"version": "0.01.03",
-		"mcversion": "1.7.10",
+		"description": "§bCustom integration and features for the TNFC Modpack.",
+    "version": "${mod_version}",
+    "mcversion": "${minecraft_version}",
 		"url": "https://github.com/AnodeCathode/TechNodefirmacraftMod",
 		"updateUrl": "",
 		"authorList": [ "AnodeCathode", "Bunsan" ],
