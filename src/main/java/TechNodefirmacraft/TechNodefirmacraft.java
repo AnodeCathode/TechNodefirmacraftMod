@@ -3,6 +3,19 @@ package TechNodefirmacraft;
 import java.io.File;
 
 import net.minecraftforge.common.MinecraftForge;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+import com.bioxx.tfc.TerraFirmaCraft;
+
 import TechNodefirmacraft.core.ModBlocks;
 import TechNodefirmacraft.core.ModCommonProxy;
 import TechNodefirmacraft.core.ModDetails;
@@ -14,17 +27,6 @@ import TechNodefirmacraft.handlers.CraftingHandler;
 import TechNodefirmacraft.handlers.PlayerInteractHandler;
 import TechNodefirmacraft.handlers.network.InitClientWorldPacket;
 
-import com.bioxx.tfc.TerraFirmaCraft;
-
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion, dependencies = ModDetails.ModDependencies)
 public class TechNodefirmacraft
@@ -35,6 +37,7 @@ public class TechNodefirmacraft
 	public static final String AssetPathGui = "textures/gui/";
 	public static final String AssetPathMenu = "textures/menu/";
 	
+
 	@SidedProxy(clientSide = ModDetails.CLIENT_PROXY_CLASS, serverSide = ModDetails.SERVER_PROXY_CLASS)
 	public static ModCommonProxy proxy;
 	
@@ -43,6 +46,7 @@ public class TechNodefirmacraft
 		return proxy.getMinecraftDirectory();
 	}
 	
+
 	@EventHandler
 	public void preInitialize(FMLPreInitializationEvent e)
 	{
@@ -89,7 +93,7 @@ public class TechNodefirmacraft
 		// Register Player Interact Handler
 		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandler());
 
-
+	
 		// Register Crafting Handler
 		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 

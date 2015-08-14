@@ -7,13 +7,17 @@ import net.minecraftforge.common.config.Property;
 
 public class ModOptions
 {
-	// General
+		public static Configuration config;
+	// Configuration Headers -- Must be entirely lowercase!
+		public static final String GENERAL_HEADER = "general";
+
+	// General options
+		public static int dropChance; //Chance of player head dropping when killed by bear.
 	
 	public static void loadSettings()
 	{	
 		System.out.println("[" + ModDetails.ModName + "] Loading options.");
 
-		Configuration config;
 
 		try
 		{
@@ -26,11 +30,9 @@ public class ModOptions
 			config = null;
 		}
 		
-		/** Start Here **/
-
-		// General
+		ModOptions.dropChance= config.getInt("dropchance", GENERAL_HEADER , 50, 1, 100, "Percentage chance a players head will drop when killed by a bear.");
 				
-		/** End Here*/
+
 		if (config != null)
 			config.save();
 
