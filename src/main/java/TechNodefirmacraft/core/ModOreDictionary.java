@@ -109,7 +109,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("bagSeed", new ItemStack(TFCItems.SeedsSquash, 1, WILD));
 		OreDictionary.registerOre("bagSeed", new ItemStack(TFCItems.SeedsJute, 1, WILD));	
 		//Other
-		OreDictionary.registerOre("ingotBrick", new ItemStack(TFCItems.StoneBrick, 1, WILD));
+		OreDictionary.registerOre("ingotStoneBrick", new ItemStack(TFCItems.StoneBrick, 1, WILD));
 		OreDictionary.registerOre("toolFlintSteel", new ItemStack(TFCItems.FlintSteel, 1, WILD));
 		
 		//Replacement for netherrack: TFC petrified wood
