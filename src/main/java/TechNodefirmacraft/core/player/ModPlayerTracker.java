@@ -2,6 +2,7 @@ package TechNodefirmacraft.core.player;
 
 import TechNodefirmacraft.handlers.network.InitClientWorldPacket;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 
 import com.bioxx.tfc.TerraFirmaCraft;
@@ -13,6 +14,7 @@ import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import cpw.mods.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent;
 import cpw.mods.fml.common.network.FMLNetworkEvent.ServerDisconnectionFromClientEvent;
+import cpw.mods.fml.common.registry.GameData;
 
 public class ModPlayerTracker 
 {
@@ -40,7 +42,7 @@ public class ModPlayerTracker
 
     @SubscribeEvent 
     public void notifyPickup(ItemPickupEvent e) 
-    { 
+    {
     } 
 
     @SubscribeEvent 

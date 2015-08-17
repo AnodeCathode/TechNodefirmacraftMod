@@ -118,13 +118,13 @@ public class ModOreDictionary {
 		
 		
 		//Replacement for Glowstone: (renamed Scapolite) TFC Selenite
-		OreDictionary.registerOre("oreScapolite", new ItemStack(TFCBlocks.Ore, 1, 19));
+		OreDictionary.registerOre("oreScapolite", new ItemStack(TFCItems.OreChunk, 1, 19));
 		
 		//Replacement for Osmium: TFC Microcline
-		OreDictionary.registerOre("oreOsmium", new ItemStack(TFCBlocks.Ore, 1, 25));
+		OreDictionary.registerOre("oreOsmium", new ItemStack(TFCItems.OreChunk, 1, 25));
 		
 		//Replacement for Apatite: TFC Olivine
-		OreDictionary.registerOre("gemApatite", new ItemStack(TFCBlocks.Ore, 1, 33));
+		OreDictionary.registerOre("gemApatite", new ItemStack(TFCItems.OreChunk, 1, 33));
 		
 		
 		//MetalsOres
