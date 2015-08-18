@@ -131,8 +131,8 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("ingotBronze", new ItemStack(TFCItems.BlackBronzeIngot, 1, WILD));
 		OreDictionary.registerOre("ingotBronze", new ItemStack(TFCItems.BismuthBronzeIngot, 1, WILD));
 		OreDictionary.registerOre("plateAnyBronze", new ItemStack(TFCItems.BronzeSheet, 1, WILD));
-		OreDictionary.registerOre("ingotBronze", new ItemStack(TFCItems.BlackBronzeSheet, 1, WILD));
-		OreDictionary.registerOre("ingotBronze", new ItemStack(TFCItems.BismuthBronzeSheet, 1, WILD));
+		OreDictionary.registerOre("plateAnyBronze", new ItemStack(TFCItems.BlackBronzeSheet, 1, WILD));
+		OreDictionary.registerOre("plateAnyBronze", new ItemStack(TFCItems.BismuthBronzeSheet, 1, WILD));
 		
 		//Replacement for BlazeRods/Powder: TFC Sulfur (Renamed Strontium)
 		OreDictionary.registerOre("oreStrontium", new ItemStack(TFCBlocks.Ore, 1, 23));
