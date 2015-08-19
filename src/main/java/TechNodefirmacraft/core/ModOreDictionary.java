@@ -29,7 +29,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("toolFlintSteel", new ItemStack(Items.flint_and_steel, 1, WILD));
 
 		//TFC stuff
-		OreDictionary.registerOre("oreAluminum", new ItemStack(TFCBlocks.Ore, 1, 30));
+		OreDictionary.registerOre("oreAluminum", new ItemStack(TFCItems.OreChunk, 1, 30));
 		OreDictionary.registerOre("craftingChest", new ItemStack(TFCBlocks.Chest, 1, WILD));
 		OreDictionary.registerOre("fenceGate", new ItemStack(TFCBlocks.FenceGate, 1, WILD));
 		OreDictionary.registerOre("fenceGate", new ItemStack(TFCBlocks.FenceGate2, 1, WILD));
@@ -113,7 +113,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("toolFlintSteel", new ItemStack(TFCItems.FlintSteel, 1, WILD));
 		
 		//Replacement for netherrack: TFC petrified wood
-		OreDictionary.registerOre("stoneNetherrack", new ItemStack(TFCBlocks.Ore, 1, 22));
+		OreDictionary.registerOre("stoneNetherrack", new ItemStack(TFCItems.OreChunk, 1, 22));
 		OreDictionary.registerOre("stoneNetherrack", new ItemStack(Blocks.netherrack, 1, WILD));
 		
 		
@@ -135,7 +135,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("plateAnyBronze", new ItemStack(TFCItems.BismuthBronzeSheet, 1, WILD));
 		
 		//Replacement for BlazeRods/Powder: TFC Sulfur (Renamed Strontium)
-		OreDictionary.registerOre("oreStrontium", new ItemStack(TFCBlocks.Ore, 1, 23));
+		OreDictionary.registerOre("oreStrontium", new ItemStack(TFCItems.OreChunk, 1, 23));
 		OreDictionary.registerOre("oreStrontium", new ItemStack(Items.blaze_rod, 1, WILD));		
 		
 		//LogSappy creation for providing slimeballs
