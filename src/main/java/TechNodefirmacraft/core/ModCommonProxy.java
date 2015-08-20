@@ -83,7 +83,7 @@ public class ModCommonProxy
 
 	public void registerTickHandler()
 	{
-		FMLCommonHandler.instance().bus().register(new ServerTickHandler());
+	//	FMLCommonHandler.instance().bus().register(new ServerTickHandler());
 	}
 	
 	public void registerTileEntities(boolean flag)
