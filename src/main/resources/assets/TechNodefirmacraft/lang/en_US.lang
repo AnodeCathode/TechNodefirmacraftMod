@@ -14,6 +14,15 @@
 #= Items =
 #=========
 
+#=========
+#= Fluids =
+#=========
+fluid.oakmix=Oak Mixture
+fluid.birchmix=Birch Mixture
+fluid.sprucemix=Spruce Mixture
+fluid.junglemix=Jungle Mixture
+fluid.acaciamix=Acacia Mixture
+fluid.darkoakmix=Dark Oak Mixture
 
 #=======
 #= GUI =
