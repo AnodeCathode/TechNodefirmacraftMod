@@ -6,8 +6,8 @@ public class ModDetails
 	public static final String ModName = "TechNodefirmacraft";
 
 	public static final int VersionMajor = 2;
-	public static final int VersionMinor = 0;
-	public static final int VersionRevision = 4;
+	public static final int VersionMinor = 2;
+	public static final int VersionRevision = 0;
 
 	public static final String ModVersion = VersionMajor + "." + VersionMinor + "." + VersionRevision;
 	public static final String ModDependencies = "after:TerraFirmaCraft";
