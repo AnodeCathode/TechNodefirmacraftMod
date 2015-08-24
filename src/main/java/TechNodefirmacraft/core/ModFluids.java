@@ -1,6 +1,9 @@
 package TechNodefirmacraft.core;
 
 
+import com.bioxx.tfc.api.TFCBlocks;
+
+import net.minecraft.util.IIcon;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -37,5 +40,20 @@ public class ModFluids extends Fluid {
 		return color;
 	}
 
+	@Override
+	public IIcon getStillIcon()
+	{
+		if(this.stillIcon == null)
+			return TFCBlocks.HotWater.getIcon(0, 0);
+		return this.stillIcon;
+	}
+
+	@Override
+	public IIcon getFlowingIcon()
+	{
+		if(this.flowingIcon == null)
+			return TFCBlocks.HotWater.getIcon(2, 0);
+		return this.flowingIcon;
+	}
 
 }
