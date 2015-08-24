@@ -13,6 +13,12 @@
 #=========
 #= Items =
 #=========
+item.Oak Mixture.name=Oak Mixture
+item.Birch Mixture.name=Birch Mixture
+item.Spruce Mixture.name=Spruce Mixture
+item.Jungle Mixture.name=Jungle Mixture
+item.Acacia Mixture.name=Acacia Mixture
+item.Dark Oak Mixture.name=Dark Oak Mixture
 
 #=========
 #= Fluids =

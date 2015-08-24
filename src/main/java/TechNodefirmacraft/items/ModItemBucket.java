@@ -12,19 +12,23 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.world.World;
 
-public class ModItemBucket extends ItemTerra {
+public class ModItemBucket extends ItemBucket {
 
-	
-	public ModItemBucket() {
-		super();
 
-	}
 
+	public ModItemBucket(Block block) {
+		super(block);
+
+	}	
+
+	@Override
 	public ItemStack onItemRightClick(ItemStack is, World world, EntityPlayer player)
 	{
 		MovingObjectPosition mop = this.getMovingObjectPositionFromPlayer(world, player, false);
@@ -46,12 +50,7 @@ public class ModItemBucket extends ItemTerra {
         return is;
 		
 	}
-	@Override
-	public boolean canStack()
-	{
-		return false;
-	}
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister registerer)
@@ -59,11 +58,12 @@ public class ModItemBucket extends ItemTerra {
         this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketMix");
        
     }
-    
+
     @Override
-    public EnumItemReach getReach(ItemStack is)
-    {
-        return EnumItemReach.SHORT;
-    }
+	public IIcon getIconFromDamage(int i)
+	{
+		return this.itemIcon;
+	}
+    
 
 }
