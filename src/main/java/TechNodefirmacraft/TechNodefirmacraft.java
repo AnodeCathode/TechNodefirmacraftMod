@@ -57,6 +57,8 @@ public class TechNodefirmacraft
 		
 		proxy.registerTickHandler();
 		
+		proxy.registerFluids();
+		
 		ModBlocks.initialise();	
 
 		// Register Key Bindings(Client only)
@@ -89,6 +91,10 @@ public class TechNodefirmacraft
 		
 		// Register the tool classes
 		proxy.registerToolClasses();
+
+		// Register Liquids
+		proxy.setupFluids();
+		proxy.registerFluidIcons();
 		
 		// Register Player Interact Handler
 		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandler());
