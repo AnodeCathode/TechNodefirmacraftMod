@@ -8,11 +8,7 @@ public class ModDetails
 	public static final String ModName = "TechNodefirmacraft";
 
 	public static final int VersionMajor = 2;
-<<<<<<< HEAD
 	public static final int VersionMinor = 2;
-=======
-	public static final int VersionMinor = 1;
->>>>>>> origin/master
 	public static final int VersionRevision = 0;
 
 	public static final String ModVersion = VersionMajor + "." + VersionMinor + "." + VersionRevision;
