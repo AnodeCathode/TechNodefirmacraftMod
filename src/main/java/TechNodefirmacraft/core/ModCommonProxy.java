@@ -117,12 +117,12 @@ public class ModCommonProxy
 
 	public void registerFluids()
 	{
-		ModFluids.OAKMIX = new ModFluids("oakmix").setBaseColor(0x31ad00);
-		ModFluids.BIRCHMIX = new ModFluids("birchmix").setBaseColor(0x249300);
-		ModFluids.SPRUCEMIX = new ModFluids("sprucemix").setBaseColor(0x258400);
-		ModFluids.JUNGLEMIX = new ModFluids("junglemix").setBaseColor(0x287200);
-		ModFluids.ACACIAMIX = new ModFluids("acaciamix").setBaseColor(0x00600B);
-		ModFluids.DARKOAKMIX = new ModFluids("darkoakmix").setBaseColor(0x004c10);
+		ModFluids.OAKMIX = new ModFluids("oakmix").setBaseColor(0x00b000);
+		ModFluids.BIRCHMIX = new ModFluids("birchmix").setBaseColor(0x9fe5a1);
+		ModFluids.SPRUCEMIX = new ModFluids("sprucemix").setBaseColor(0x52a267);
+		ModFluids.JUNGLEMIX = new ModFluids("junglemix").setBaseColor(0x5a8108);
+		ModFluids.ACACIAMIX = new ModFluids("acaciamix").setBaseColor(0x7e8108);
+		ModFluids.DARKOAKMIX = new ModFluids("darkoakmix").setBaseColor(0x597a5a);
 
 		FluidRegistry.registerFluid(ModFluids.OAKMIX);
 		FluidRegistry.registerFluid(ModFluids.BIRCHMIX);
