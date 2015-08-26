@@ -51,13 +51,6 @@ public class ModItemBucket extends ItemBucket {
 		
 	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister registerer)
-    {
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketMix");
-       
-    }
 
     @Override
 	public IIcon getIconFromDamage(int i)
