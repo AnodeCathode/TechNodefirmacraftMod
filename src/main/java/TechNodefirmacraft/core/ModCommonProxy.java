@@ -1,19 +1,15 @@
 package TechNodefirmacraft.core;
 
 import java.io.File;
-
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import TechNodefirmacraft.handlers.ServerTickHandler;
 
 public class ModCommonProxy
 {
@@ -85,7 +81,7 @@ public class ModCommonProxy
 
 	public void registerTickHandler()
 	{
-	//	FMLCommonHandler.instance().bus().register(new ServerTickHandler());
+		FMLCommonHandler.instance().bus().register(new ServerTickHandler());
 	}
 	
 	public void registerTileEntities(boolean flag)

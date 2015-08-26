@@ -1,10 +1,13 @@
 package TechNodefirmacraft.core;
 
 import net.minecraftforge.oredict.OreDictionary;
+import minetweaker.MineTweakerImplementationAPI;
 
 public class ModRecipes
 {	
 	public static final int WILDCARD_VALUE = OreDictionary.WILDCARD_VALUE;
+	public static boolean ScriptsReloaded = false;
+	private static int tickcount = 0;
 	
 	//private static AnvilManager anvilManager = AnvilManager.getInstance();
 	//private static BarrelManager barrelManager = BarrelManager.getInstance();
@@ -51,5 +54,21 @@ public class ModRecipes
 	
 	private static void registerRecipes()
 	{
+	}
+
+	public static void initMTScripts() {
+		//Force a reload of MT scripts at world start to fix Meks late recipe registration
+		if (!ScriptsReloaded)
+		{
+			tickcount++;
+			//Wait for mekanism to finish screwing up all the recipes.
+			if (tickcount > 10)
+			{
+			MineTweakerImplementationAPI.reload();
+			System.out.println("[" + ModDetails.ModName + "] Forced MineTweaker Script reload. *shakes fist at Mekanism*");
+			ScriptsReloaded = true;
+			}
+		}
+			
 	}
 }
