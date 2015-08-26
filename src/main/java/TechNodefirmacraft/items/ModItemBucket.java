@@ -55,12 +55,7 @@ public class ModItemBucket extends ItemBucket {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister registerer)
     {
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketOakMix");
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketBirchMix");
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketSprucMix");
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketJungleMix");
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketAcaciaMix");
-        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketDarkOakMix");
+        this.itemIcon = registerer.registerIcon("technodefirmacraft:fluidContainers_bucketMix");
        
     }
 
