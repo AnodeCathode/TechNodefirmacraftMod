@@ -32,12 +32,12 @@ public class ModItems
 	
 	private static void registerItems()
 	{
-		BucketOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
-		BucketBirchMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Birch Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
-		BucketSpruceMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Spruce Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
-		BucketJungleMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Jungle Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
-		BucketAcaciaMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Acacia Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
-		BucketDarkOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Dark Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketMix");
+		BucketOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketOakMix");
+		BucketBirchMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Birch Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketBirchMix");
+		BucketSpruceMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Spruce Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketSpruceMix");
+		BucketJungleMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Jungle Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketJungleMix");
+		BucketAcaciaMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Acacia Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketAcaciaMix");
+		BucketDarkOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Dark Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketDarkOakMix");
 		GameRegistry.registerItem(BucketOakMix, BucketOakMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketBirchMix, BucketBirchMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketSpruceMix, BucketSpruceMix.getUnlocalizedName().substring(5));
