@@ -7,7 +7,7 @@ import TechNodefirmacraft.core.ModRecipes;
 
 import com.bioxx.tfc.Handlers.Network.AbstractPacket;
 
-public class InitClientWorldPacket extends AbstractPacket
+public class InitModClientWorldPacket extends AbstractPacket
 {
 	@Override
 	public void encodeInto(ChannelHandlerContext ctx, ByteBuf buffer) 

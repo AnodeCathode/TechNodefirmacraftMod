@@ -1,6 +1,5 @@
 package TechNodefirmacraft.core;
 
-import net.minecraftforge.fluids.Fluid;
 
 public class ModDetails 
 {
@@ -9,10 +8,10 @@ public class ModDetails
 
 	public static final int VersionMajor = 2;
 	public static final int VersionMinor = 2;
-	public static final int VersionRevision = 0;
+	public static final int VersionRevision = 1;
 
 	public static final String ModVersion = VersionMajor + "." + VersionMinor + "." + VersionRevision;
-	public static final String ModDependencies = "after:TerraFirmaCraft";
+	public static final String ModDependencies = "required-after:terrafirmacraft";
 	public static final String ModChannel = "technodefirmacraft";
 	public static final String SERVER_PROXY_CLASS = "TechNodefirmacraft.core.ModCommonProxy";
 	public static final String CLIENT_PROXY_CLASS = "TechNodefirmacraft.core.ModClientProxy";

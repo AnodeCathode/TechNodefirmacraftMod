@@ -9,7 +9,7 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import TechNodefirmacraft.handlers.ServerTickHandler;
+import TechNodefirmacraft.handlers.STickHandler;
 
 public class ModCommonProxy
 {
@@ -81,7 +81,7 @@ public class ModCommonProxy
 
 	public void registerTickHandler()
 	{
-		FMLCommonHandler.instance().bus().register(new ServerTickHandler());
+		FMLCommonHandler.instance().bus().register(new STickHandler());
 	}
 	
 	public void registerTileEntities(boolean flag)

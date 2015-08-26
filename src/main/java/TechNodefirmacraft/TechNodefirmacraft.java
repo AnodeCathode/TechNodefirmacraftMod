@@ -25,7 +25,7 @@ import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
 import TechNodefirmacraft.handlers.CraftingHandler;
 import TechNodefirmacraft.handlers.PlayerInteractHandler;
-import TechNodefirmacraft.handlers.network.InitClientWorldPacket;
+import TechNodefirmacraft.handlers.network.InitModClientWorldPacket;
 
 
 @Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion, dependencies = ModDetails.ModDependencies)
@@ -84,7 +84,7 @@ public class TechNodefirmacraft
 	public void initialize(FMLInitializationEvent e)
 	{
 		// Register packets in the TFC PacketPipeline
-		TerraFirmaCraft.packetPipeline.registerPacket(InitClientWorldPacket.class);
+		TerraFirmaCraft.packetPipeline.registerPacket(InitModClientWorldPacket.class);
 		
 		// Register the player tracker
 		FMLCommonHandler.instance().bus().register(new ModPlayerTracker());

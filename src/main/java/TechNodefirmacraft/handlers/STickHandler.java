@@ -9,14 +9,14 @@ import TechNodefirmacraft.core.ModRecipes;
 
 
 
-public class ServerTickHandler 
+public class STickHandler 
 {
     @SubscribeEvent 
     public void onServerWorldTick(WorldTickEvent e) 
     { 
         if (e.phase == Phase.START) 
         { 
-        	if (e.world.provider.dimensionId == 0)
+        	if (e.world.provider.dimensionId == 0  && !ModRecipes.ScriptsReloaded)
         	{
         		//ModRecipes.initialiseAnvil(); 
         		ModRecipes.initMTScripts();
@@ -24,7 +24,7 @@ public class ServerTickHandler
         } 
 		else if(e.phase == Phase.END)
 		{
-
+			
 		}
     } 
 }

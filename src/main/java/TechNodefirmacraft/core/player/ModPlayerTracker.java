@@ -1,6 +1,6 @@
 package TechNodefirmacraft.core.player;
 
-import TechNodefirmacraft.handlers.network.InitClientWorldPacket;
+import TechNodefirmacraft.handlers.network.InitModClientWorldPacket;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
@@ -21,7 +21,7 @@ public class ModPlayerTracker
     @SubscribeEvent 
     public void onPlayerLoggedIn(PlayerLoggedInEvent e) 
     { 
-        AbstractPacket packet = new InitClientWorldPacket(); 
+        AbstractPacket packet = new InitModClientWorldPacket(); 
         TerraFirmaCraft.packetPipeline.sendTo(packet, (EntityPlayerMP)e.player); 
     } 
 
