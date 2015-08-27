@@ -198,15 +198,15 @@ public class ModOreDictionary {
 			OreDictionary.registerOre("oreNickel", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem0"), 1, 8));
 			OreDictionary.registerOre("oreZinc", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem0"), 1, 12));
 			OreDictionary.registerOre("dustPlatinum", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem1"), 1, 3));
-			OreDictionary.registerOre("dustBizmuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem1"), 1, 1));
+			OreDictionary.registerOre("dustBismuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem1"), 1, 1));
 			OreDictionary.registerOre("dustNickel", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem1"), 1, 2));
 			OreDictionary.registerOre("dustZinc", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem1"), 1, 0));
 			OreDictionary.registerOre("clumpPlatinum", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem3"), 1, 3));
-			OreDictionary.registerOre("clumpBizmuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem3"), 1, 1));
+			OreDictionary.registerOre("clumpBismuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem3"), 1, 1));
 			OreDictionary.registerOre("clumpNickel", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem3"), 1, 2));
 			OreDictionary.registerOre("clumpZinc", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem3"), 1, 0));
 			OreDictionary.registerOre("shardPlatinum", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem4"), 1, 3));
-			OreDictionary.registerOre("shardBizmuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem4"), 1, 1));
+			OreDictionary.registerOre("shardBismuth", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem4"), 1, 1));
 			OreDictionary.registerOre("shardNickel", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem4"), 1, 2));
 			OreDictionary.registerOre("shardZinc", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem4"), 1, 0));
 			
