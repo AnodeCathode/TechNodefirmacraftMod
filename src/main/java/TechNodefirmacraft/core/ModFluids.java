@@ -44,7 +44,7 @@ public class ModFluids extends Fluid {
 	public IIcon getStillIcon()
 	{
 		if(this.stillIcon == null)
-			return TFCBlocks.HotWater.getIcon(0, 0);
+			return TFCBlocks.hotWater.getIcon(0, 0);
 		return this.stillIcon;
 	}
 
@@ -52,7 +52,7 @@ public class ModFluids extends Fluid {
 	public IIcon getFlowingIcon()
 	{
 		if(this.flowingIcon == null)
-			return TFCBlocks.HotWater.getIcon(2, 0);
+			return TFCBlocks.hotWater.getIcon(2, 0);
 		return this.flowingIcon;
 	}
 

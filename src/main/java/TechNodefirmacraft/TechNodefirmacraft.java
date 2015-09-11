@@ -84,7 +84,7 @@ public class TechNodefirmacraft
 	public void initialize(FMLInitializationEvent e)
 	{
 		// Register packets in the TFC PacketPipeline
-		TerraFirmaCraft.packetPipeline.registerPacket(InitModClientWorldPacket.class);
+		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(InitModClientWorldPacket.class);
 		
 		// Register the player tracker
 		FMLCommonHandler.instance().bus().register(new ModPlayerTracker());

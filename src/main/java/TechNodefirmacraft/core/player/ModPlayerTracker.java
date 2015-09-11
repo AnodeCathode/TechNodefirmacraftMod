@@ -22,7 +22,7 @@ public class ModPlayerTracker
     public void onPlayerLoggedIn(PlayerLoggedInEvent e) 
     { 
         AbstractPacket packet = new InitModClientWorldPacket(); 
-        TerraFirmaCraft.packetPipeline.sendTo(packet, (EntityPlayerMP)e.player); 
+        TerraFirmaCraft.PACKET_PIPELINE.sendTo(packet, (EntityPlayerMP)e.player); 
     } 
 
     @SubscribeEvent 
