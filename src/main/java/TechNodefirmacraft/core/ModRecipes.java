@@ -1,7 +1,7 @@
 package TechNodefirmacraft.core;
 
 import net.minecraftforge.oredict.OreDictionary;
-import minetweaker.MineTweakerImplementationAPI;
+
 
 public class ModRecipes
 {	
@@ -56,19 +56,5 @@ public class ModRecipes
 	{
 	}
 
-	public static void initMTScripts() {
-		//Force a reload of MT scripts at world start to fix Meks late recipe registration
-		if (!ScriptsReloaded)
-		{
-			tickcount++;
-			//Wait for mekanism to finish screwing up all the recipes.
-			if (tickcount > 10)
-			{
-			MineTweakerImplementationAPI.reload();
-			System.out.println("[" + ModDetails.ModName + "] Forced MineTweaker Script reload. *shakes fist at Mekanism*");
-			ScriptsReloaded = true;
-			}
-		}
-			
-	}
+
 }
