@@ -37,6 +37,43 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("fenceGate", new ItemStack(TFCBlocks.FenceGate, 1, WILD));
 		OreDictionary.registerOre("plateIron", new ItemStack(TFCItems.WroughtIronSheet, 1, WILD));
 
+		//TFC In-World Ores
+        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.Ore1, 1, 0));
+        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.Ore1, 1, 9));
+        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.Ore1, 1, 13));
+        OreDictionary.registerOre("tfcGold", new ItemStack(TFCBlocks.Ore1, 1, 1));
+        OreDictionary.registerOre("tfcPlatinum", new ItemStack(TFCBlocks.Ore1, 1, 2));
+        OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.Ore1, 1, 3));
+		OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.Ore1, 1, 10));
+		OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.Ore1, 1, 11));
+		OreDictionary.registerOre("tfcSilver", new ItemStack(TFCBlocks.Ore1, 1, 4));
+		OreDictionary.registerOre("tfcCassiterite", new ItemStack(TFCBlocks.Ore1, 1, 5));
+		OreDictionary.registerOre("tfcGalena", new ItemStack(TFCBlocks.Ore1, 1, 6));
+		OreDictionary.registerOre("tfcBismuth", new ItemStack(TFCBlocks.Ore1, 1, 7));
+		OreDictionary.registerOre("tfcGarnierite", new ItemStack(TFCBlocks.Ore1, 1, 8));
+		OreDictionary.registerOre("tfcSphalerite", new ItemStack(TFCBlocks.Ore1, 1, 12));
+		OreDictionary.registerOre("tfcCoal", new ItemStack(TFCBlocks.Ore1, 1, 14));
+		OreDictionary.registerOre("tfcCoal", new ItemStack(TFCBlocks.Ore1, 1, 15));
+		OreDictionary.registerOre("tfcKaolinite", new ItemStack(TFCBlocks.Ore2, 1, 0));
+		OreDictionary.registerOre("tfcGypsum", new ItemStack(TFCBlocks.Ore2, 1, 1));
+		OreDictionary.registerOre("tfcScheelite", new ItemStack(TFCBlocks.Ore2, 1, 2));
+		OreDictionary.registerOre("tfcScapolite", new ItemStack(TFCBlocks.Ore2, 1, 3));
+		OreDictionary.registerOre("tfcGraphite", new ItemStack(TFCBlocks.Ore2, 1, 4));
+		OreDictionary.registerOre("tfcKimberlite", new ItemStack(TFCBlocks.Ore2, 1, 5));
+		OreDictionary.registerOre("tfcPetrifiedWood", new ItemStack(TFCBlocks.Ore2, 1, 6));
+		OreDictionary.registerOre("tfcStrontium", new ItemStack(TFCBlocks.Ore2, 1, 7));
+		OreDictionary.registerOre("tfcJet", new ItemStack(TFCBlocks.Ore2, 1, 8));
+		OreDictionary.registerOre("tfcOsmium", new ItemStack(TFCBlocks.Ore2, 1, 9));
+		OreDictionary.registerOre("tfcPitchBlende", new ItemStack(TFCBlocks.Ore2, 1, 10));
+		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.Ore2, 1, 11));
+		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.Ore2, 1, 12));
+		OreDictionary.registerOre("tfcSaltpeter", new ItemStack(TFCBlocks.Ore2, 1, 13));
+		OreDictionary.registerOre("tfcBauxite", new ItemStack(TFCBlocks.Ore2, 1, 14));
+		OreDictionary.registerOre("tfcSylvite", new ItemStack(TFCBlocks.Ore2, 1, 15));
+		OreDictionary.registerOre("tfcBorax", new ItemStack(TFCBlocks.Ore3, 1, 0));
+		OreDictionary.registerOre("tfcApatite", new ItemStack(TFCBlocks.Ore3, 1, 1));
+		OreDictionary.registerOre("tfcLapis", new ItemStack(TFCBlocks.Ore3, 1, 2));
+
 		//TFC Tools
 		//Hammers
 		OreDictionary.registerOre("craftingToolLowHammer", new ItemStack(TFCItems.WroughtIronHammer, 1, WILD));
