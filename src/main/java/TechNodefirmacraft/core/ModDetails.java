@@ -11,7 +11,7 @@ public class ModDetails
 	public static final int VersionRevision = 0;
 
 	public static final String ModVersion = VersionMajor + "." + VersionMinor + "." + VersionRevision;
-	public static final String ModDependencies = "required-after:terrafirmacraft";
+
 	public static final String ModChannel = "technodefirmacraft";
 	public static final String SERVER_PROXY_CLASS = "TechNodefirmacraft.core.ModCommonProxy";
 	public static final String CLIENT_PROXY_CLASS = "TechNodefirmacraft.core.ModClientProxy";

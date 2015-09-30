@@ -28,7 +28,7 @@ import TechNodefirmacraft.handlers.PlayerInteractHandler;
 import TechNodefirmacraft.handlers.network.InitModClientWorldPacket;
 
 
-@Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion, dependencies = ModDetails.ModDependencies)
+@Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion)
 public class TechNodefirmacraft
 {
 	@Instance(ModDetails.ModID)
