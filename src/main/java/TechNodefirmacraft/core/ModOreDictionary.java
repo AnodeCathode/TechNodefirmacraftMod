@@ -38,12 +38,12 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("plateIron", new ItemStack(TFCItems.wroughtIronSheet, 1, WILD));
 
 		//TFC In-World Ores
-        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 0));
-        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 9));
-        OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 13));
-        OreDictionary.registerOre("tfcGold", new ItemStack(TFCBlocks.ore, 1, 1));
-        OreDictionary.registerOre("tfcPlatinum", new ItemStack(TFCBlocks.ore, 1, 2));
-        OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.ore, 1, 3));
+		OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 0));
+        	OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 9));
+        	OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 13));
+        	OreDictionary.registerOre("tfcGold", new ItemStack(TFCBlocks.ore, 1, 1));
+        	OreDictionary.registerOre("tfcPlatinum", new ItemStack(TFCBlocks.ore, 1, 2));
+                OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.ore, 1, 3));
 		OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.ore, 1, 10));
 		OreDictionary.registerOre("tfcIron", new ItemStack(TFCBlocks.ore, 1, 11));
 		OreDictionary.registerOre("tfcSilver", new ItemStack(TFCBlocks.ore, 1, 4));
