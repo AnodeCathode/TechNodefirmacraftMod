@@ -19,7 +19,7 @@ public class STickHandler
         	if (e.world.provider.dimensionId == 0  && !ModRecipes.ScriptsReloaded)
         	{
         		//ModRecipes.initialiseAnvil(); 
-        		ModRecipes.initMTScripts();
+
         	}	
         } 
 		else if(e.phase == Phase.END)
