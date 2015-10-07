@@ -226,7 +226,11 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("logSappy", new ItemStack(TFCItems.logs, 1, 8));
 		OreDictionary.registerOre("logSappy", new ItemStack(TFCItems.logs, 1, 9));
 		OreDictionary.registerOre("logSappy", new ItemStack(TFCItems.logs, 1, 10));
-		
+
+		//Supports
+		OreDictionary.registerOre("supportWood", new ItemStack(TFCBlocks.woodSupportV, 1, WILD));
+		OreDictionary.registerOre("supportWood", new ItemStack(TFCBlocks.woodSupportV2, 1, WILD));
+
 		//StoneAny - Catch all for Raw and Smooth Stone
 		OreDictionary.registerOre("stoneAny", new ItemStack(TFCBlocks.stoneSed, 1, WILD));
 		OreDictionary.registerOre("stoneAny", new ItemStack(TFCBlocks.stoneMM, 1, WILD));
