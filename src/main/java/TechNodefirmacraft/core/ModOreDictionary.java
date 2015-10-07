@@ -105,6 +105,7 @@ public class ModOreDictionary {
 
         //Anvils
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil, 1, 2));
+        OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 0));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 1));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 2));
 
