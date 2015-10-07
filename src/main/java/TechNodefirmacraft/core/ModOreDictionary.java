@@ -27,6 +27,12 @@ public class ModOreDictionary {
 
 		//TFC stuff
         //Food
+		OreDictionary.registerOre("foodWholeGrain", new ItemStack(TFCItems.wheatWhole, 1, WILD));
+		OreDictionary.registerOre("foodWholeGrain", new ItemStack(TFCItems.ryeWhole, 1, WILD));
+		OreDictionary.registerOre("foodWholeGrain", new ItemStack(TFCItems.barleyWhole, 1, WILD));
+		OreDictionary.registerOre("foodWholeGrain", new ItemStack(TFCItems.oatWhole, 1, WILD));
+		OreDictionary.registerOre("foodWholeGrain", new ItemStack(TFCItems.riceWhole, 1, WILD));
+
         OreDictionary.registerOre("foodGrain", new ItemStack(TFCItems.maizeEar, 1, WILD));
         OreDictionary.registerOre("foodGrain", new ItemStack(TFCItems.wheatGrain, 1, WILD));
         OreDictionary.registerOre("foodGrain", new ItemStack(TFCItems.ryeGrain, 1, WILD));
@@ -104,10 +110,16 @@ public class ModOreDictionary {
         OreDictionary.registerOre("foodDairy", new ItemStack(TFCItems.woodenBucketMilk, 1, WILD));
 
         //Anvils
-        OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil, 1, 2));
+		OreDictionary.registerOre("anvilTier2", new ItemStack(TFCBlocks.anvil, 1, 1));
+		OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil, 1, 2));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 0));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 1));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 2));
+		OreDictionary.registerOre("anvilTier4", new ItemStack(TFCBlocks.anvil, 1, 3));
+		OreDictionary.registerOre("anvilTier5", new ItemStack(TFCBlocks.anvil, 1, 4));
+		OreDictionary.registerOre("anvilTier6", new ItemStack(TFCBlocks.anvil, 1, 5));
+		OreDictionary.registerOre("anvilTier7", new ItemStack(TFCBlocks.anvil, 1, 6));
+		OreDictionary.registerOre("anvilTier7", new ItemStack(TFCBlocks.anvil, 1, 7));
 
         //TFC In-World Ore Blocks
 		OreDictionary.registerOre("tfcCopper", new ItemStack(TFCBlocks.ore, 1, 0));
