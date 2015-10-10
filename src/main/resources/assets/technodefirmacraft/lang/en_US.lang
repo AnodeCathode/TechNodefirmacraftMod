@@ -1,0 +1,57 @@
+#en_US
+#This is the Main language configuration file
+#
+#If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
+#To create the § symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#This file needs to be UTF-8 encoded to work with MC 1.7+
+
+#==========
+#= Blocks =
+#==========
+
+
+#=========
+#= Items =
+#=========
+item.Oak Mixture.name=Oak Mixture
+item.Birch Mixture.name=Birch Mixture
+item.Spruce Mixture.name=Spruce Mixture
+item.Jungle Mixture.name=Jungle Mixture
+item.Acacia Mixture.name=Acacia Mixture
+item.Dark Oak Mixture.name=Dark Oak Mixture
+
+#=========
+#= Fluids =
+#=========
+fluid.oakmix=Oak Mixture
+fluid.birchmix=Birch Mixture
+fluid.sprucemix=Spruce Mixture
+fluid.junglemix=Jungle Mixture
+fluid.acaciamix=Acacia Mixture
+fluid.darkoakmix=Dark Oak Mixture
+
+#=======
+#= GUI =
+#=======
+
+
+#===========
+#= Strings =
+#===========
+
+
+#========
+#= Misc =
+#========
+
+#== Creative Tabs ==
+
+
+#=========
+#= WAILA =
+#=========
+
+#== Tooltips ==
+
+
+#== Options ==
