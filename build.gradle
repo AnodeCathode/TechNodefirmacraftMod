@@ -64,10 +64,15 @@ dependencies {
 	compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
 }
 
+
 //Creates a compiled de-obfuscated jar
 task deobfJar(type: Jar) {
     from sourceSets.main.output
     appendix = 'deobf'
+    manifest.attributes(
+      'FMLCorePlugin': 'TechNodefirmacraft.TNFCASMLoadingPlugin',
+			'FMLCorePluginContainsFMLMod': 'true',
+    )
 }
 
 //creates a jar containing only the src
@@ -103,6 +108,12 @@ processResources {
 }
 clean {
   delete "bin"
+}
+jar {
+    manifest.attributes(
+      'FMLCorePlugin': 'TechNodefirmacraft.TNFCASMLoadingPlugin',
+			'FMLCorePluginContainsFMLMod': 'true',
+    )
 }
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.2.1'
