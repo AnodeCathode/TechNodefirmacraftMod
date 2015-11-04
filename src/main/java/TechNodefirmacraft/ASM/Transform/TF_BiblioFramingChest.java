@@ -70,7 +70,14 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
 		final String ENTITY_COLLIDE = "func_145845_h";
         final String ENTITY_COLLIDE_DESC = "()V";
 
-		/*	Need to add this: To tick the chest for heat and decay
+		/* Instructions we need to find:
+		 * 	mv.visitVarInsn(ALOAD, 0);
+			mv.visitInsn(ICONST_0);
+			mv.visitFieldInsn(PUTFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "numPlayersUsing", "I");
+		 */
+        
+        
+        /*	Need to add this: To tick the chest for heat and decay
 				mv.visitVarInsn(ALOAD, 0);
 				mv.visitVarInsn(ALOAD, 0);
 				mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "worldObj", "Lnet/minecraft/world/World;");
@@ -93,7 +100,7 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
                 {
                     if (instruction.getOpcode() == ALOAD)
                     {
-                        if (((VarInsnNode) instruction).var == 0 && instruction.getNext().getOpcode() == INVOKESPECIAL)
+                        if (((VarInsnNode) instruction).var == 0 && instruction.getNext().getOpcode() == ICONST_0)
                         {
                             targetNode = instruction;
                             LOG.info("Found target instruction");
