@@ -4,6 +4,10 @@ package TechNodefirmacraft.ASM.Transform;
 
 import java.util.Arrays;
 
+import net.minecraft.inventory.IInventory;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.objectweb.asm.ClassReader;
@@ -13,9 +17,13 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldInsnNode;
 import org.objectweb.asm.tree.InsnList;
+import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.IntInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.VarInsnNode;
+
+import com.bioxx.tfc.Core.TFC_Core;
 
 import static org.objectweb.asm.Opcodes.*;
 
@@ -71,9 +79,8 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
         final String ENTITY_COLLIDE_DESC = "()V";
 
 		/* Instructions we need to find:
-		 * 	mv.visitVarInsn(ALOAD, 0);
-			mv.visitInsn(ICONST_0);
-			mv.visitFieldInsn(PUTFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "numPlayersUsing", "I");
+			mv.visitInsn(IADD);
+			mv.visitFieldInsn(PUTFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "ticksSinceSync", "I");
 		 */
         
         
@@ -100,7 +107,7 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
                 {
                     if (instruction.getOpcode() == ALOAD)
                     {
-                        if (((VarInsnNode) instruction).var == 0 && instruction.getNext().getOpcode() == ICONST_0)
+                        if (((VarInsnNode) instruction).var == 0 && instruction.getNext().getOpcode() == INVOKESPECIAL)
                         {
                             targetNode = instruction;
                             LOG.info("Found target instruction");
@@ -110,6 +117,20 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
                 }
                 if (targetNode != null )
                 {
+                	/*
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "worldObj", "Lnet/minecraft/world/World;");
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "xCoord", "I");
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "yCoord", "I");
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "zCoord", "I");
+						mv.visitVarInsn(ALOAD, 0);
+						mv.visitFieldInsn(GETFIELD, "jds/bibliocraft/tileentities/TileEntityFramedChest", "ticksSinceSync", "I");
+						mv.visitMethodInsn(INVOKESTATIC, "TechNodefirmacraft/ASM/Transform/TF_BiblioFramingChest", "handleItemTicking", "(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/world/World;IIII)V", false);
+                	 */
                     
                     InsnList toInsert = new InsnList();
                     toInsert.add(new VarInsnNode(ALOAD, 0));
@@ -121,7 +142,9 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
                     toInsert.add(new FieldInsnNode(GETFIELD,"jds/bibliocraft/tileentities/TileEntityFramedChest", "field_145848_d", "I"));
                     toInsert.add(new VarInsnNode(ALOAD, 0));
                     toInsert.add(new FieldInsnNode(GETFIELD,"jds/bibliocraft/tileentities/TileEntityFramedChest", "field_145849_e", "I"));
-                    toInsert.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "com/bioxx/tfc/Core/TFC_Core","handleItemTicking","(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/world/World;III)V", false));
+                    toInsert.add(new VarInsnNode(ALOAD, 0));
+                    toInsert.add(new FieldInsnNode(GETFIELD,"jds/bibliocraft/tileentities/TileEntityFramedChest", "ticksSinceSync", "I"));
+                    toInsert.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "TechNodefirmacraft/ASM/Transform/TF_BiblioFramingChest","handleItemTicking","(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/world/World;IIII)V", false));
                     method.instructions.insertBefore(targetNode,toInsert);
                     LOG.info("Done terrible things to that method. Working?");
 
@@ -135,5 +158,12 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
             }
         }
     }
+	public static void handleItemTicking(IInventory te, World world, int xCoord, int yCoord, int zCoord, int tickCount)
+	{
+		if ((tickCount) % 20 == 0)
+		{
+			TFC_Core.handleItemTicking(te, world, xCoord, yCoord, zCoord, 20);	
+		}
+	}
 
 }
