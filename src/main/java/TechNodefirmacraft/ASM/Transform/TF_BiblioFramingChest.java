@@ -162,7 +162,7 @@ public class TF_BiblioFramingChest  implements net.minecraft.launchwrapper.IClas
 	{
 		if ((tickCount) % 20 == 0)
 		{
-			TFC_Core.handleItemTicking(te, world, xCoord, yCoord, zCoord, 20);	
+			TFC_Core.handleItemTicking(te, world, xCoord, yCoord, zCoord);
 		}
 	}
 
