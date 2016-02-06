@@ -1,5 +1,6 @@
 package TechNodefirmacraft.core;
 
+import com.bioxx.tfc.Items.ItemMetalSheet;
 import com.bioxx.tfc.api.TFCItems;
 
 import net.minecraft.init.Blocks;
@@ -342,6 +343,11 @@ public class ModOreDictionary {
 		if (Loader.isModLoaded("PneumaticCraft")) {
 			OreDictionary.registerOre("pressureChamber", new ItemStack(GameData.getItemRegistry().getObject("PneumaticCraft:pressureChamberWall"), 1, 6));
 		OreDictionary.registerOre("pressureChamber", new ItemStack(GameData.getItemRegistry().getObject("PneumaticCraft:pressureChamberWall"), 1, 0));
+		}
+
+		//Immersive Engineering
+		if (Loader.isModLoaded("ImmersiveEngineering") && Loader.isModLoaded("TabulaRasa")) {
+			OreDictionary.registerOre("moldBlank", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem7"), 1, 15));
 		}
 		
 		System.out.println("[" + ModDetails.ModName + "] Finished Registering OreDictionary entries");		
