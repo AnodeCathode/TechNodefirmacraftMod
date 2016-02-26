@@ -1,7 +1,7 @@
 package TechNodefirmacraft.core;
 
 import java.io.File;
-
+import TechNodefirmacraft.core.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Loader;
@@ -39,9 +39,7 @@ public class ModClientProxy extends ModCommonProxy
 	@Override
 	public void hideNEIItems()
 	{
-		if (Loader.isModLoaded(ModDetails.MODID_NEI))
-		{
-		}
+		if (Loader.isModLoaded("NotEnoughItems")) ModNEICompat.hideNEIItems();
 	}
 
 	@Override
