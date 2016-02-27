@@ -54,7 +54,7 @@ public class ModNEICompat {
             "BiblioWoodpotshelf"
         );
 
-        ImmutableList<String> streams = ImmutableList.of(
+        ImmutableList<String> hideStreams = ImmutableList.of(
                 "river/tile.FreshWaterStationary/-2/-2",
                 "river/tile.FreshWaterStationary/-2/-1",
                 "river/tile.FreshWaterStationary/-2/0",
@@ -108,16 +108,178 @@ public class ModNEICompat {
                 "river/ice/2/2"
         );
 
-
-        if (Loader.isModLoaded("streams")) {
-            for (String streamFluid : streams) {
+        if (Loader.isModLoaded(Streams)) {
+            for (String streamFluid : hideStreams) {
                 ItemStack streamBlocks = GameRegistry.findItemStack(Streams, streamFluid, 1);
                 if (streamBlocks != null) {
                     API.hideItem(streamBlocks);
                 }
-
             }
         }
+
+        ImmutableList<String> hidePMPcrop = ImmutableList.of(
+                "Beet",
+                "BellPepperOrange",
+                "BellPepperRed",
+                "BellPepperYellow",
+                "Broccoli",
+                "Cassava",
+                "Celery",
+                "Corn",
+                "Cucumber",
+                "Eggplant",
+                "GreenBean",
+                "Leek",
+                "Lettuce",
+                "Onion",
+                "Sorrel",
+                "Spinach",
+                "Tomato"
+            );
+        ImmutableList<String> hidePMPberries = ImmutableList.of(
+                "Beauty",
+                "Black",
+                "Blue",
+                "Elder",
+                "Goose",
+                "Huckle",
+                "Orange",
+                "Snow",
+                "Straw",
+                "HarlequinMistletoe"
+        );
+
+        ImmutableList<String> hidePMPFood = ImmutableList.of(
+                "foodGreenBeans",
+                "foodCassavaRoot",
+                "foodCentellaLeaves",
+                "foodLaksaLeaves",
+                "foodMozukuSeaweed",
+                "foodPeanuts",
+                "foodPricklyPearFruit",
+                "foodQuinoaSeeds",
+                "foodRice",
+                "foodSacredLotusRoot",
+                "foodTaroRoot",
+                "foodWasabiStem",
+                "foodWaterChestnut",
+                "foodWatercress",
+                "foodWildRice",
+                "foodCookedRice",
+                "foodCornFlour",
+                "foodCornBread",
+                "foodBeetSoup",
+                "foodBerrybowl",
+                "foodBroccoliSoup",
+                "foodElderberrySorbet",
+                "foodMozukuSoup",
+                "foodSnowberryCustard",
+                "foodQuinoaCereal",
+                "foodTomatoSoup",
+                "foodBeautyberryTurnover",
+                "foodBlackberryDanish",
+                "foodBlueberryMuffin",
+                "foodGooseberryCobbler",
+                "foodHuckleberryTart",
+                "foodOrangeberrySquare",
+                "foodCookiePeanutButter",
+                "foodStrawberryDelight",
+                "foodJelly",
+                "foodPeanutButter",
+                "foodStuffedPepperOrange",
+                "foodStuffedPepperRed",
+                "foodStuffedPepperYellow",
+                "foodSandwichPBJ",
+                "foodSandwichBeef",
+                "foodSandwichChicken",
+                "foodSandwichFish",
+                "foodSandwichMutton",
+                "foodSandwichPork",
+                "foodBeautyberryBlazer",
+                "foodBlackberryTumbler",
+                "foodBlueberrySlushie",
+                "foodElderberrySpritzer",
+                "foodGooseberryShake",
+                "foodHarlequinFizz",
+                "foodHuckleberryBubbler",
+                "foodOrangeberryWhip",
+                "foodPricklyPearTwister",
+                "foodSnowberryCooler",
+                "foodStrawberrySmoothie",
+                "foodWasabiQuencher",
+                "wrapCorn",
+                "wrapSeaweed",
+                "wrapCornBeef",
+                "wrapCornChicken",
+                "wrapCornFish",
+                "wrapCornPork",
+                "wrapCornRice",
+                "wrapBeef",
+                "wrapChicken",
+                "wrapFish",
+                "wrapPork",
+                "wrapRice",
+                "foodStirFry",
+                "powderAloe",
+                "powderBerry",
+                "powderCactus",
+                "powderCoral",
+                "powderFern",
+                "powderLeaf",
+                "powderMoss",
+                "powderMushroom",
+                "powderMushroomPoison",
+                "powderConditioner",
+                "powderDefoliant",
+                "powderFertilizer"
+        );
+
+        if (Loader.isModLoaded(PMP)) {
+            for (String PMPcrops : hidePMPcrop) {
+                ItemStack cropPMP = GameRegistry.findItemStack(PMP, "crop" + PMPcrops, 1);
+                ItemStack seedPMP = GameRegistry.findItemStack(PMP, "seed" + PMPcrops, 1);
+                ItemStack foodPMP = GameRegistry.findItemStack(PMP, "food" + PMPcrops, 1);
+                if (cropPMP != null) {
+                    API.hideItem(cropPMP);
+                }
+                if (seedPMP != null) {
+                    API.hideItem(seedPMP);
+                }
+                if (foodPMP != null) {
+                    API.hideItem(foodPMP);
+                }
+            }
+            for (String PMPberries : hidePMPberries) {
+                ItemStack berriesPMP = GameRegistry.findItemStack(PMP, "berries" + PMPberries, 1);
+                ItemStack berryBushPMP = GameRegistry.findItemStack(PMP, "berrybush" + PMPberries, 1);
+                if (berriesPMP != null) {
+                    API.hideItem(berriesPMP);
+                }
+                if (berryBushPMP != null) {
+                    API.hideItem(berryBushPMP);
+                }
+            }
+            for (String PMPFood : hidePMPFood) {
+                ItemStack PMPFoods = GameRegistry.findItemStack(PMP, PMPFood, 1);
+                if (PMPFoods != null) {
+                    API.hideItem(PMPFoods);
+                }
+            }
+        }
+
+        ImmutableList<String> hideAroma = ImmutableList.of(
+                "wrench",
+                "wrenched"
+        );
+        if (Loader.isModLoaded(Aroma1997Core)) {
+            for (String AromaItems : hideAroma) {
+                ItemStack aromaCore = GameRegistry.findItemStack(Aroma1997Core, AromaItems, 1);
+                if (aromaCore != null) {
+                    API.hideItem(aromaCore);
+                }
+            }
+        }
+
 //Minecraft Items/blocks
         API.hideItem(new ItemStack(Items.chainmail_boots));
         API.hideItem(new ItemStack(Items.chainmail_chestplate));
@@ -226,6 +388,7 @@ public class ModNEICompat {
         API.hideItem(new ItemStack(Blocks.stonebrick, 1, OreDictionary.WILDCARD_VALUE));
         API.hideItem(new ItemStack(Blocks.melon_block));
         API.hideItem(new ItemStack(Blocks.vine));
+        API.hideItem(new ItemStack(Blocks.web));
         API.hideItem(new ItemStack(Blocks.mycelium));
         API.hideItem(new ItemStack(Blocks.waterlily));
         API.hideItem(new ItemStack(Blocks.end_portal));
@@ -236,6 +399,9 @@ public class ModNEICompat {
         API.hideItem(new ItemStack(Blocks.leaves, 1, OreDictionary.WILDCARD_VALUE));
         API.hideItem(new ItemStack(Blocks.leaves2, 1, OreDictionary.WILDCARD_VALUE));
         API.hideItem(new ItemStack(Blocks.cobblestone_wall, 1, OreDictionary.WILDCARD_VALUE));
+        API.hideItem(new ItemStack(Blocks.enchanting_table));
+        API.hideItem(new ItemStack(Blocks.beacon));
+        API.hideItem(new ItemStack(Blocks.command_block));
 
         API.hideItem(new ItemStack(Items.flint_and_steel));
         API.hideItem(new ItemStack(Items.apple));
@@ -284,10 +450,11 @@ public class ModNEICompat {
         API.hideItem(new ItemStack(Items.tnt_minecart));
         API.hideItem(new ItemStack(Items.iron_horse_armor));
         API.hideItem(new ItemStack(Items.golden_horse_armor));
-        API.hideItem(new ItemStack(Items.lead));
         API.hideItem(new ItemStack(Items.name_tag));
         API.hideItem(new ItemStack(Items.gold_nugget));
         API.hideItem(new ItemStack(Items.enchanted_book));
+        API.hideItem(new ItemStack(Items.wooden_door));
+        API.hideItem(new ItemStack(Items.command_block_minecart));
 
         //TFC Items/Blocks
         API.hideItem(new ItemStack(TFCBlocks.freshWater));
@@ -301,6 +468,7 @@ public class ModNEICompat {
         API.hideItem(new ItemStack(TFCBlocks.freshWater));
 
     }
-    public static final String BiblioTFC = "BiblioWoodsTFC";
     public static final String Streams = "streams";
+    public static final String PMP = "plantmegapack";
+    public static final String Aroma1997Core = "Aroma1997Core";
 }
