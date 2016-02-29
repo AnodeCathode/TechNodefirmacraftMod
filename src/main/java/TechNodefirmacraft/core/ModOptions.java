@@ -31,7 +31,7 @@ public class ModOptions
 		}
 		
 		ModOptions.dropChance= config.getInt("dropchance", GENERAL_HEADER , 50, 1, 100, "Percentage chance a players head will drop when killed by a bear.");
-				
+		ModOptions.enableNEIHiding= config.getBoolean("NEI hiding", GENERAL_HEADER, enableNEIHiding, "Set to false to show all the hidden Items in NEI.");
 
 		if (config != null)
 			config.save();
@@ -168,4 +168,5 @@ public class ModOptions
 		}
 		return value;
 	}
+	public static boolean enableNEIHiding = true;
 }
