@@ -448,6 +448,29 @@ public class ModNEICompat {
                     API.hideItem(new ItemStack(uselessTS, 1, OreDictionary.WILDCARD_VALUE));
                 }
             }
+            //HQM
+            ImmutableList<String> hideHQM = ImmutableList.of(
+                    "item_barrel",
+                    "quest_tracker",
+                    "quest_portal",
+                    "hqmInvalidItem"
+            );
+            if (Loader.isModLoaded(HQM)) {
+                for (String HQMStuff : hideHQM) {
+                    ItemStack HQMItems = GameRegistry.findItemStack(HQM, HQMStuff, 1);
+                    if (HQMItems != null) {
+                        API.hideItem(HQMItems);
+                    }
+                }
+                Item heartsHQM = GameRegistry.findItem(HQM, "hearts");
+                if (heartsHQM != null) {
+                    API.hideItem(new ItemStack(heartsHQM, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item bagsHQM = GameRegistry.findItem(HQM, "bags");
+                if (bagsHQM != null) {
+                    API.hideItem(new ItemStack(bagsHQM, 1, OreDictionary.WILDCARD_VALUE));
+                }
+            }
 
 //Minecraft Items/blocks
             API.hideItem(new ItemStack(Items.chainmail_boots));
@@ -648,5 +671,5 @@ public class ModNEICompat {
     public static final String RC = "Railcraft";
     public static final String OB = "OpenBlocks";
     public static final String TS = "Tubestuff";
-    public static final String W2 = "weather2";
+    public static final String HQM = "HardcoreQuesting";
 }
