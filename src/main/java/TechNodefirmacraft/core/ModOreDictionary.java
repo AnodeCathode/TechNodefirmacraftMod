@@ -196,7 +196,18 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("craftingToolMediumSaw", new ItemStack(TFCItems.blueSteelSaw, 1, WILD));
 		OreDictionary.registerOre("craftingToolHardSaw", new ItemStack(TFCItems.redSteelSaw, 1, WILD));
 		OreDictionary.registerOre("craftingToolHardSaw", new ItemStack(TFCItems.blueSteelSaw, 1, WILD));
-		
+		//Knives
+		OreDictionary.registerOre("craftingToolKnife", new ItemStack(TFCItems.wroughtIronKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolKnife", new ItemStack(TFCItems.steelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolKnife", new ItemStack(TFCItems.blackSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolKnife", new ItemStack(TFCItems.redSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolKnife", new ItemStack(TFCItems.blueSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolMediumKnife", new ItemStack(TFCItems.steelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolMediumKnife", new ItemStack(TFCItems.blackSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolMediumKnife", new ItemStack(TFCItems.redSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolMediumKnife", new ItemStack(TFCItems.blueSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolHardKnife", new ItemStack(TFCItems.redSteelKnife, 1, WILD));
+		OreDictionary.registerOre("craftingToolHardKnife", new ItemStack(TFCItems.blueSteelKnife, 1, WILD));
 		
 		//TFC-Gems
 		OreDictionary.registerOre("craftingBlueGem", new ItemStack(TFCItems.gemSapphire, 1, WILD));
@@ -348,6 +359,11 @@ public class ModOreDictionary {
 		//Immersive Engineering
 		if (Loader.isModLoaded("ImmersiveEngineering") && Loader.isModLoaded("TabulaRasa")) {
 			OreDictionary.registerOre("moldBlank", new ItemStack(GameData.getItemRegistry().getObject("TabulaRasa:RasaItem7"), 1, 15));
+		}
+
+		//Leather Water Sac
+		if (Loader.isModLoaded("lwstfc")) {
+			OreDictionary.registerOre("itemBladder", new ItemStack(GameData.getItemRegistry().getObject("lwstfc:item.Bladder"), 1, WILD));
 		}
 		
 		System.out.println("[" + ModDetails.ModName + "] Finished Registering OreDictionary entries");		
