@@ -471,6 +471,29 @@ public class ModNEICompat {
                     API.hideItem(new ItemStack(bagsHQM, 1, OreDictionary.WILDCARD_VALUE));
                 }
             }
+            //Storage Drawers
+            if (Loader.isModLoaded(SD)) {
+                Item full1SD = GameRegistry.findItem(SD, "fullDrawers1");
+                if (full1SD != null) {
+                    API.hideItem(new ItemStack(full1SD, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item full2SD = GameRegistry.findItem(SD, "fullDrawers2");
+                if (full2SD != null) {
+                    API.hideItem(new ItemStack(full2SD, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item full4SD = GameRegistry.findItem(SD, "fullDrawers4");
+                if (full4SD != null) {
+                    API.hideItem(new ItemStack(full4SD, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item half2SD = GameRegistry.findItem(SD, "halfDrawers2");
+                if (half2SD != null) {
+                    API.hideItem(new ItemStack(half2SD, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item half4SD = GameRegistry.findItem(SD, "halfDrawers4");
+                if (half4SD != null) {
+                    API.hideItem(new ItemStack(half4SD, 1, OreDictionary.WILDCARD_VALUE));
+                }
+            }
 
 //Minecraft Items/blocks
             API.hideItem(new ItemStack(Items.chainmail_boots));
@@ -672,4 +695,5 @@ public class ModNEICompat {
     public static final String OB = "OpenBlocks";
     public static final String TS = "Tubestuff";
     public static final String HQM = "HardcoreQuesting";
+    public static final String SD = "StorageDrawers";
 }
