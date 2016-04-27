@@ -534,7 +534,7 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Items.golden_shovel));
             API.hideItem(new ItemStack(Items.golden_sword));
             API.hideItem(new ItemStack(Blocks.grass));
-            API.hideItem(new ItemStack(Blocks.gravel));
+           // API.hideItem(new ItemStack(Blocks.gravel));
             API.hideItem(new ItemStack(Items.iron_axe));
             API.hideItem(new ItemStack(Items.iron_boots));
             API.hideItem(new ItemStack(Items.iron_chestplate));
