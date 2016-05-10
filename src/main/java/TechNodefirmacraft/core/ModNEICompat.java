@@ -620,7 +620,7 @@ public class ModNEICompat {
 
             API.hideItem(new ItemStack(Items.flint_and_steel));
             API.hideItem(new ItemStack(Items.apple));
-            API.hideItem(new ItemStack(Items.bow));
+            //API.hideItem(new ItemStack(Items.bow));
             API.hideItem(new ItemStack(Items.arrow));
             API.hideItem(new ItemStack(Items.stone_axe));
             API.hideItem(new ItemStack(Items.stone_hoe));
