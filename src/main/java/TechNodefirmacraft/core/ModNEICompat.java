@@ -608,7 +608,7 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Blocks.waterlily));
             API.hideItem(new ItemStack(Blocks.end_portal));
             API.hideItem(new ItemStack(Blocks.end_portal_frame));
-            API.hideItem(new ItemStack(Blocks.anvil, 1, OreDictionary.WILDCARD_VALUE));
+            //API.hideItem(new ItemStack(Blocks.anvil, 1, OreDictionary.WILDCARD_VALUE));
             API.hideItem(new ItemStack(Blocks.hay_block));
             API.hideItem(new ItemStack(Blocks.double_plant, 1, OreDictionary.WILDCARD_VALUE));
             API.hideItem(new ItemStack(Blocks.leaves, 1, OreDictionary.WILDCARD_VALUE));
