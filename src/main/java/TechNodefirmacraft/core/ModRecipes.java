@@ -59,7 +59,7 @@ public class ModRecipes
 	
 	private static void registerRecipes()
 	{
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.TFCBeacon, 1), "222", "232", "111", '1', "blockAluminum", '2', "blockGlass", '3', "itemNetherStar"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.TFCBeacon, 1), "222", "232", "111", '1', "blockPlatinum", '2', "blockGlass", '3', "itemNetherStar"));
 	}
 
 
