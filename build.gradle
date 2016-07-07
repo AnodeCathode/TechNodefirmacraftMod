@@ -31,26 +31,24 @@ allprojects {
     apply plugin: 'maven'
     group = config.group_name
     version = config.mod_version
-    archivesBaseName = "${config.minecraft_version}-${config.mod_id}"
+	archivesBaseName = "[${config.minecraft_version}]${config.mod_id}"
 
     minecraft {
-        version = config.minecraft_version + "-" + config.forge_version + "-" + config.minecraft_version 
-        if(file('../run').exists()) {
-            runDir = "../run"
-        } else {
-            runDir = ""
-        }
-    }
+    version = config.minecraft_version + "-" + config.forge_version
+	if(file('../run').exists()) {
+		runDir = "../run"
+	} else {
+		runDir = "run"
+		if (!file(runDir).exists()) file(runDir).mkdir()
+	}
 }
 
 repositories {
-    maven { 
-    	// The repo from which to get waila
+    maven { // The repo from which to get waila
         name "Mobius Repo"
         url "http://mobiusstrip.eu/maven"
     }
-    maven { 
-    	// the repo from which to get NEI and stuff 
+    maven { // the repo from which to get NEI and stuff 
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
