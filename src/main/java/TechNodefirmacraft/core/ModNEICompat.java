@@ -651,7 +651,7 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Items.shears));
             API.hideItem(new ItemStack(Items.melon));
             API.hideItem(new ItemStack(Items.ghast_tear));
-            API.hideItem(new ItemStack(Items.brewing_stand));
+            //API.hideItem(new ItemStack(Items.brewing_stand));
             API.hideItem(new ItemStack(Items.magma_cream));
             API.hideItem(new ItemStack(Items.speckled_melon));
             API.hideItem(new ItemStack(Items.carrot));
@@ -660,7 +660,7 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Items.potato));
             API.hideItem(new ItemStack(Items.baked_potato));
             API.hideItem(new ItemStack(Items.poisonous_potato));
-            API.hideItem(new ItemStack(Items.nether_star));
+            //API.hideItem(new ItemStack(Items.nether_star));
             API.hideItem(new ItemStack(Items.pumpkin_pie));
             API.hideItem(new ItemStack(Items.tnt_minecart));
             API.hideItem(new ItemStack(Items.iron_horse_armor));

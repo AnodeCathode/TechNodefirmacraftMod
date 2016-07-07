@@ -1,9 +1,8 @@
 package TechNodefirmacraft.core;
 
 import TechNodefirmacraft.blocks.BlockLiquidMix;
-
-
-
+import TechNodefirmacraft.blocks.BlockTFCBeacon;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
 public class ModBlocks 
@@ -17,6 +16,7 @@ public class ModBlocks
 	public static Block JungleMix;
 	public static Block AcaciaMix;
 	public static Block DarkOakMix;
+	public static Block TFCBeacon;
 	
 
 	
@@ -24,6 +24,13 @@ public class ModBlocks
 	{
 		System.out.println("[" + ModDetails.ModName + "] Registering Blocks");
 		
+		OakMix = (new BlockLiquidMix(ModFluids.OAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("OakMix");
+		BirchMix = (new BlockLiquidMix(ModFluids.BIRCHMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("BirchMix");
+		SpruceMix = (new BlockLiquidMix(ModFluids.SPRUCEMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("SpruceMix");
+		JungleMix = (new BlockLiquidMix(ModFluids.JUNGLEMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("JungleMix");
+		AcaciaMix = (new BlockLiquidMix(ModFluids.ACACIAMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("AcaciaMix");
+		DarkOakMix = (new BlockLiquidMix(ModFluids.DARKOAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("DarkOakMix");
+		TFCBeacon = (new BlockTFCBeacon().setBlockName("TFCBeacon"));
 		registerBlocks();
 		
 		System.out.println("[" + ModDetails.ModName + "] Done Registering Blocks");
@@ -31,12 +38,8 @@ public class ModBlocks
 
 	private static void registerBlocks()
 	{
-		OakMix = (new BlockLiquidMix(ModFluids.OAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("OakMix");
-		BirchMix = (new BlockLiquidMix(ModFluids.BIRCHMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("BirchMix");
-		SpruceMix = (new BlockLiquidMix(ModFluids.SPRUCEMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("SpruceMix");
-		JungleMix = (new BlockLiquidMix(ModFluids.JUNGLEMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("JungleMix");
-		AcaciaMix = (new BlockLiquidMix(ModFluids.ACACIAMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("AcaciaMix");
-		DarkOakMix = (new BlockLiquidMix(ModFluids.DARKOAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("DarkOakMix");
+		
+		GameRegistry.registerBlock(TFCBeacon, "TFCBeacon");
 		
 	}
 }

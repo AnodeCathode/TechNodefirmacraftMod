@@ -39,7 +39,7 @@ public class PlayerInteractHandler {
 				String name = itemInHand.getUnlocalizedName();
 				if (name.contains("tile.openblocks.tank") || name.contains("tile.MachineBlock2.PortableTank") ||
 						name.contains("ImmersiveEngineering.drill") || name.contains("ImmersiveEngineering.chemthrower")
-						|| name.contains("ImmersiveEngineering.jerrycan")){
+						|| name.contains("ImmersiveEngineering.jerrycan") || name.contains("MachineBlock2")){
 					event.setCanceled(true);
 					return;
 				}

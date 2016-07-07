@@ -11,9 +11,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.FMLEventChannel;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import com.bioxx.tfc.TerraFirmaCraft;
+import com.bioxx.tfc.Handlers.PacketHandler;
 
 import TechNodefirmacraft.core.ModBlocks;
 import TechNodefirmacraft.core.ModCommonProxy;
@@ -25,6 +29,7 @@ import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
 import TechNodefirmacraft.handlers.CraftingHandler;
 import TechNodefirmacraft.handlers.PlayerInteractHandler;
+import TechNodefirmacraft.handlers.network.TFCBeaconPacket;
 import TechNodefirmacraft.handlers.network.InitModClientWorldPacket;
 
 
@@ -85,6 +90,7 @@ public class TechNodefirmacraft
 	{
 		// Register packets in the TFC PacketPipeline
 		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(InitModClientWorldPacket.class);
+		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(TFCBeaconPacket.class);
 		
 		// Register the player tracker
 		FMLCommonHandler.instance().bus().register(new ModPlayerTracker());
@@ -120,4 +126,10 @@ public class TechNodefirmacraft
 	public void postInitialize(FMLPostInitializationEvent e)
 	{
 	}
+//	@EventHandler
+//	public void serverLoad(FMLServerStartingEvent event){
+//		// create our mod's channel.
+//		FMLEventChannel eventChannel = NetworkRegistry.INSTANCE.newEventDrivenChannel(instance.toString());
+//		eventChannel.register(new CustomPacketHandler());
+//	}
 }

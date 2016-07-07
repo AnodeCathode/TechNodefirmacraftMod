@@ -59,7 +59,7 @@ public class ModClientProxy extends ModCommonProxy
 	@Override
 	public void registerGuiHandler()
 	{
-		NetworkRegistry.INSTANCE.registerGuiHandler(TechNodefirmacraft.TechNodefirmacraft.instance, new TechNodefirmacraft.handlers.client.GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(TechNodefirmacraft.TechNodefirmacraft.instance, new TechNodefirmacraft.handlers.GuiHandler());
 	}
 
 	@Override
