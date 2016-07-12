@@ -28,7 +28,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    private long field_146016_i;
 	    @SideOnly(Side.CLIENT)
 	    private float field_146014_j;
-	    private boolean field_146015_k;
+	    private boolean beaconEnabled;
 	    /** Level of this beacon's pyramid. */
 	    private int levels = -1;
 	    /** Primary potion effect given by this beacon. */
@@ -37,22 +37,22 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    private int secondaryEffect;
 	    /** Item given to this beacon as payment. */
 	    private ItemStack payment;
-	    private String field_146008_p;
-	    private static final String __OBFID = "CL_00000339";
+	    private String displayName;
+
 
 	    @Override
 	    public void updateEntity()
 	    {
 	        if (this.worldObj.getTotalWorldTime() % 80L == 0L)
 	        {
-	            this.func_146003_y();
-	            this.func_146000_x();
+	            this.updateStatus();
+	            this.updateEffects();
 	        }
 	    }
 
-	    private void func_146000_x()
+	    private void updateEffects()
 	    {
-	        if (this.field_146015_k && this.levels > 0 && !this.worldObj.isRemote && this.primaryEffect > 0)
+	        if (this.beaconEnabled && this.levels > 0 && !this.worldObj.isRemote && this.primaryEffect > 0)
 	        {
 	            double d0 = (double)(this.levels * 10 + 10);
 	            byte b0 = 0;
@@ -97,18 +97,18 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    }
 
 
-	    private void func_146003_y()
+	    private void updateStatus()
 	    {
 	        int i = this.levels;
 
 	        if (!this.worldObj.canBlockSeeTheSky(this.xCoord, this.yCoord + 1, this.zCoord))
 	        {
-	            this.field_146015_k = false;
+	            this.beaconEnabled = false;
 	            this.levels = 0;
 	        }
 	        else
 	        {
-	            this.field_146015_k = true;
+	            this.beaconEnabled = true;
 	            this.levels = 0;
 
 	            for (int j = 1; j <= 4; this.levels = j++)
@@ -144,7 +144,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 
 	            if (this.levels == 0)
 	            {
-	                this.field_146015_k = false;
+	                this.beaconEnabled = false;
 	            }
 	        }
 
@@ -163,7 +163,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    @SideOnly(Side.CLIENT)
 	    public float func_146002_i()
 	    {
-	        if (!this.field_146015_k)
+	        if (!this.beaconEnabled)
 	        {
 	            return 0.0F;
 	        }
@@ -221,13 +221,13 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    }
 
 	    @SideOnly(Side.CLIENT)
-	    public void func_146005_c(int p_146005_1_)
+	    public void func_146005_c(int level)
 	    {
-	        this.levels = p_146005_1_;
+	        this.levels = level;
 	    }
 
 	    @Override
-	    public void setPrimaryEffect(int p_146001_1_)
+	    public void setPrimaryEffect(int effectID)
 	    {
 	        this.primaryEffect = 0;
 
@@ -240,16 +240,16 @@ public class TETFCBeacon extends TileEntityBeacon {
 	            {
 	                Potion potion = apotion[l];
 
-	                if (potion.id == p_146001_1_)
+	                if (potion.id == effectID)
 	                {
-	                    this.primaryEffect = p_146001_1_;
+	                    this.primaryEffect = effectID;
 	                    return;
 	                }
 	            }
 	        }
 	    }
 	    @Override
-	    public void setSecondaryEffect(int p_146004_1_)
+	    public void setSecondaryEffect(int effectID)
 	    {
 	        this.secondaryEffect = 0;
 
@@ -264,9 +264,9 @@ public class TETFCBeacon extends TileEntityBeacon {
 	                {
 	                    Potion potion = apotion[l];
 
-	                    if (potion.id == p_146004_1_)
+	                    if (potion.id == effectID)
 	                    {
-	                        this.secondaryEffect = p_146004_1_;
+	                        this.secondaryEffect = effectID;
 	                        return;
 	                    }
 	                }
@@ -291,21 +291,21 @@ public class TETFCBeacon extends TileEntityBeacon {
 	        return 65536.0D;
 	    }
 	    @Override
-	    public void readFromNBT(NBTTagCompound p_145839_1_)
+	    public void readFromNBT(NBTTagCompound nbtTag)
 	    {
-	        super.readFromNBT(p_145839_1_);
-	        this.primaryEffect = p_145839_1_.getInteger("Primary");
-	        this.secondaryEffect = p_145839_1_.getInteger("Secondary");
-	        this.levels = p_145839_1_.getInteger("Levels");
+	        super.readFromNBT(nbtTag);
+	        this.primaryEffect = nbtTag.getInteger("Primary");
+	        this.secondaryEffect = nbtTag.getInteger("Secondary");
+	        this.levels = nbtTag.getInteger("Levels");
 	    }
 
 	    @Override
-	    public void writeToNBT(NBTTagCompound p_145841_1_)
+	    public void writeToNBT(NBTTagCompound nbtTag)
 	    {
-	        super.writeToNBT(p_145841_1_);
-	        p_145841_1_.setInteger("Primary", this.primaryEffect);
-	        p_145841_1_.setInteger("Secondary", this.secondaryEffect);
-	        p_145841_1_.setInteger("Levels", this.levels);
+	        super.writeToNBT(nbtTag);
+	        nbtTag.setInteger("Primary", this.primaryEffect);
+	        nbtTag.setInteger("Secondary", this.secondaryEffect);
+	        nbtTag.setInteger("Levels", this.levels);
 	    }
 
 	    /**
@@ -313,7 +313,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	     */
 	    public String getInventoryName()
 	    {
-	        return this.hasCustomInventoryName() ? this.field_146008_p : "container.beacon";
+	        return this.hasCustomInventoryName() ? this.displayName : "container.tfcbeacon";
 	    }
 
 	    /**
@@ -321,12 +321,12 @@ public class TETFCBeacon extends TileEntityBeacon {
 	     */
 	    public boolean hasCustomInventoryName()
 	    {
-	        return this.field_146008_p != null && this.field_146008_p.length() > 0;
+	        return this.displayName != null && this.displayName.length() > 0;
 	    }
 
 	    public void func_145999_a(String p_145999_1_)
 	    {
-	        this.field_146008_p = p_145999_1_;
+	        this.displayName = p_145999_1_;
 	    }
 
 	    /**
