@@ -6,10 +6,10 @@ import net.minecraft.world.World;
 
 import com.bioxx.tfc.Containers.ContainerTFC;
 
-import TechNodefirmacraft.Containers.ContainerTFCBeacon;
-import TechNodefirmacraft.TileEntities.TETFCBeacon;
+import TechNodefirmacraft.Containers.ContainerTNFCBeacon;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
 import TechNodefirmacraft.core.ModDetails;
-import TechNodefirmacraft.gui.GuiTFCBeacon;
+import TechNodefirmacraft.gui.GuiTNFCBeacon;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler
@@ -33,7 +33,7 @@ public class GuiHandler implements IGuiHandler
 		switch (Id)
 		{
 			case 0:
-				return new ContainerTFCBeacon(player.inventory, (TETFCBeacon) tileEntity);
+				return new ContainerTNFCBeacon(player.inventory, (TETNFCBeacon) tileEntity);
 				
 			default:
 				return null;
@@ -55,7 +55,7 @@ public class GuiHandler implements IGuiHandler
 		System.out.println("Opening: " + Id);
 		if (Id == 0)
 		{
-			return new GuiTFCBeacon(player.inventory, (TETFCBeacon) tileEntity);
+			return new GuiTNFCBeacon(player.inventory, (TETNFCBeacon) tileEntity);
 		}
 		return null;
 	}

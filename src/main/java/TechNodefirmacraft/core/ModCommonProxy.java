@@ -10,8 +10,8 @@ import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import TechNodefirmacraft.TileEntities.TETFCBeacon;
-import TechNodefirmacraft.handlers.STickHandler;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
+
 
 public class ModCommonProxy
 {
@@ -89,10 +89,11 @@ public class ModCommonProxy
 	public void registerTileEntities(boolean flag)
 	{
 		// non TESR registers
-		GameRegistry.registerTileEntity(TETFCBeacon.class, "TETFCBeacon");
+		
 		if (flag)
 		{
 			// TESR registers
+			GameRegistry.registerTileEntity(TETNFCBeacon.class, "TETFCBeacon");
 		}
 	}
 

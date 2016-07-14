@@ -10,6 +10,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.Packet;
@@ -17,10 +18,10 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.AchievementList;
-import net.minecraft.tileentity.TileEntityBeacon;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 
-public class TETFCBeacon extends TileEntityBeacon {
+public class TETNFCBeacon extends TileEntity implements IInventory {
 
 	    /** List of effects that Beacon can apply */
 	    public static final Potion[][] effectsList = new Potion[][] {{Potion.moveSpeed, Potion.digSpeed}, {Potion.resistance, Potion.jump}, {Potion.damageBoost}, {Potion.regeneration}};
@@ -196,7 +197,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    /**
 	     * Return the primary potion effect given by this beacon.
 	     */
-	    @Override
+
 	    public int getPrimaryEffect()
 	    {
 	        return this.primaryEffect;
@@ -205,7 +206,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    /**
 	     * Return the secondary potion effect given by this beacon.
 	     */
-	    @Override
+
 	    public int getSecondaryEffect()
 	    {
 	        return this.secondaryEffect;
@@ -214,19 +215,19 @@ public class TETFCBeacon extends TileEntityBeacon {
 	    /**
 	     * Return the levels of this beacon's pyramid.
 	     */
-	    @Override
+
 	    public int getLevels()
 	    {
 	        return this.levels;
 	    }
 
 	    @SideOnly(Side.CLIENT)
-	    public void func_146005_c(int level)
+	    public void getLevels(int level)
 	    {
 	        this.levels = level;
 	    }
 
-	    @Override
+
 	    public void setPrimaryEffect(int effectID)
 	    {
 	        this.primaryEffect = 0;
@@ -248,7 +249,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	            }
 	        }
 	    }
-	    @Override
+
 	    public void setSecondaryEffect(int effectID)
 	    {
 	        this.secondaryEffect = 0;
@@ -324,7 +325,7 @@ public class TETFCBeacon extends TileEntityBeacon {
 	        return this.displayName != null && this.displayName.length() > 0;
 	    }
 
-	    public void func_145999_a(String p_145999_1_)
+	    public void setDisplayName(String p_145999_1_)
 	    {
 	        this.displayName = p_145999_1_;
 	    }
@@ -366,5 +367,73 @@ public class TETFCBeacon extends TileEntityBeacon {
 		this.secondaryEffect = secondary;
 		
 	}
-
+	/**
+     * Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a
+     * new stack.
+     */
+    public ItemStack decrStackSize(int slot, int num)
+    {
+        if (slot == 0 && this.payment != null)
+        {
+            if (num >= this.payment.stackSize)
+            {
+                ItemStack itemstack = this.payment;
+                this.payment = null;
+                return itemstack;
+            }
+            else
+            {
+                this.payment.stackSize -= num;
+                return new ItemStack(this.payment.getItem(), num, this.payment.getItemDamage());
+            }
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
+    /**
+     * Returns the number of slots in the inventory.
+     */
+    public int getSizeInventory()
+    {
+        return 1;
+    }
+    
+    /**
+     * Returns the stack in slot i
+     */
+    public ItemStack getStackInSlot(int slot)
+    {
+        return slot == 0 ? this.payment : null;
+    }
+    /**
+     * When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem -
+     * like when you close a workbench GUI.
+     */
+    public ItemStack getStackInSlotOnClosing(int slot)
+    {
+        if (slot == 0 && this.payment != null)
+        {
+            ItemStack itemstack = this.payment;
+            this.payment = null;
+            return itemstack;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
+    /**
+     * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+     */
+    public void setInventorySlotContents(int slot, ItemStack is)
+    {
+        if (slot == 0)
+        {
+            this.payment = is;
+        }
+    }
 }

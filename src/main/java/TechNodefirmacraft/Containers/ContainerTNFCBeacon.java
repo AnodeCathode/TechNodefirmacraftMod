@@ -2,7 +2,7 @@ package TechNodefirmacraft.Containers;
 
 import com.bioxx.tfc.api.TFCItems;
 
-import TechNodefirmacraft.TileEntities.TETFCBeacon;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,18 +16,18 @@ import net.minecraft.item.ItemStack;
 
 
 
-public class ContainerTFCBeacon extends Container{
-	   private TETFCBeacon tileBeacon;
+public class ContainerTNFCBeacon extends Container{
+	   private TETNFCBeacon tileBeacon;
 	    /** This beacon's slot where you put in Emerald, Diamond, Gold or Wrought Iron Ingot. */
-	    private final ContainerTFCBeacon.BeaconSlot beaconSlot;
+	    private final ContainerTNFCBeacon.BeaconSlot beaconSlot;
 	    private int levels;
 	    private int primaryeffect;
 	    private int secondaryeffect;
 
-	public ContainerTFCBeacon(InventoryPlayer p, TETFCBeacon tebeacon)
+	public ContainerTNFCBeacon(InventoryPlayer p, TETNFCBeacon tebeacon)
     {
         this.tileBeacon = tebeacon;
-        this.addSlotToContainer(this.beaconSlot = new ContainerTFCBeacon.BeaconSlot(tebeacon, 0, 136, 110));
+        this.addSlotToContainer(this.beaconSlot = new ContainerTNFCBeacon.BeaconSlot(tebeacon, 0, 136, 110));
         byte b0 = 36;
         short short1 = 137;
         int i;
@@ -67,7 +67,7 @@ public class ContainerTFCBeacon extends Container{
     {
         if (mode == 0)
         {
-            this.tileBeacon.func_146005_c(value);
+            this.tileBeacon.getLevels(value);
         }
 
         if (mode == 1)
@@ -81,7 +81,7 @@ public class ContainerTFCBeacon extends Container{
         }
     }
 
-    public TETFCBeacon func_148327_e()
+    public TETNFCBeacon func_148327_e()
     {
         return this.tileBeacon;
     }

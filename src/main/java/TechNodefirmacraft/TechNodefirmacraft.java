@@ -29,7 +29,7 @@ import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
 import TechNodefirmacraft.handlers.CraftingHandler;
 import TechNodefirmacraft.handlers.PlayerInteractHandler;
-import TechNodefirmacraft.handlers.network.TFCBeaconPacket;
+import TechNodefirmacraft.handlers.network.TNFCBeaconPacket;
 import TechNodefirmacraft.handlers.network.InitModClientWorldPacket;
 
 
@@ -90,7 +90,7 @@ public class TechNodefirmacraft
 	{
 		// Register packets in the TFC PacketPipeline
 		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(InitModClientWorldPacket.class);
-		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(TFCBeaconPacket.class);
+		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(TNFCBeaconPacket.class);
 		
 		// Register the player tracker
 		FMLCommonHandler.instance().bus().register(new ModPlayerTracker());

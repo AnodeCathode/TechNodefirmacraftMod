@@ -8,43 +8,37 @@ import org.lwjgl.opengl.GL11;
 
 import com.bioxx.tfc.TerraFirmaCraft;
 import com.bioxx.tfc.Handlers.Network.AbstractPacket;
-import com.bioxx.tfc.Handlers.Network.PlayerUpdatePacket;
 import com.bioxx.tfc.api.TFCItems;
 
-import TechNodefirmacraft.Containers.ContainerTFCBeacon;
-import TechNodefirmacraft.TileEntities.TETFCBeacon;
-import TechNodefirmacraft.handlers.network.TFCBeaconPacket;
+import TechNodefirmacraft.Containers.ContainerTNFCBeacon;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
+import TechNodefirmacraft.handlers.network.TNFCBeaconPacket;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.ContainerBeacon;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.play.client.C17PacketCustomPayload;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
 
 
-public class GuiTFCBeacon extends GuiContainer{
+public class GuiTNFCBeacon extends GuiContainer{
     private static final Logger logger = LogManager.getLogger();
     private static final ResourceLocation beaconGuiTextures = new ResourceLocation("textures/gui/container/beacon.png");
-    private GuiTFCBeacon.ConfirmButton beaconConfirmButton;
+    private GuiTNFCBeacon.ConfirmButton beaconConfirmButton;
     private boolean buttonsNotDrawn;
-	private TETFCBeacon tileBeacon;
+	private TETNFCBeacon tileBeacon;
     
 
-    public GuiTFCBeacon(InventoryPlayer inv, TETFCBeacon tebeacon)
+    public GuiTNFCBeacon(InventoryPlayer inv, TETNFCBeacon tebeacon)
     {
-        super(new ContainerTFCBeacon(inv, tebeacon));
+        super(new ContainerTNFCBeacon(inv, tebeacon));
 		this.tileBeacon = tebeacon;
         this.xSize = 230;
         this.ySize = 219;
@@ -58,8 +52,8 @@ public class GuiTFCBeacon extends GuiContainer{
     public void initGui()
     {
         super.initGui();
-        this.buttonList.add(this.beaconConfirmButton = new GuiTFCBeacon.ConfirmButton(-1, this.guiLeft + 164, this.guiTop + 107));
-        this.buttonList.add(new GuiTFCBeacon.CancelButton(-2, this.guiLeft + 190, this.guiTop + 107));
+        this.buttonList.add(this.beaconConfirmButton = new GuiTNFCBeacon.ConfirmButton(-1, this.guiLeft + 164, this.guiTop + 107));
+        this.buttonList.add(new GuiTNFCBeacon.CancelButton(-2, this.guiLeft + 190, this.guiTop + 107));
         this.buttonsNotDrawn = true;
         this.beaconConfirmButton.enabled = false;
     }
@@ -78,17 +72,17 @@ public class GuiTFCBeacon extends GuiContainer{
             int k;
             int l;
             int i1;
-            GuiTFCBeacon.PowerButton powerbutton;
+            GuiTNFCBeacon.PowerButton powerbutton;
 
             for (int i = 0; i <= 2; ++i)
             {
-                j = TETFCBeacon.effectsList[i].length;
+                j = TETNFCBeacon.effectsList[i].length;
                 k = j * 22 + (j - 1) * 2;
 
                 for (l = 0; l < j; ++l)
                 {
-                    i1 = TETFCBeacon.effectsList[i][l].id;
-                    powerbutton = new GuiTFCBeacon.PowerButton(i << 8 | i1, this.guiLeft + 76 + l * 24 - k / 2, this.guiTop + 22 + i * 25, i1, i);
+                    i1 = TETNFCBeacon.effectsList[i][l].id;
+                    powerbutton = new GuiTNFCBeacon.PowerButton(i << 8 | i1, this.guiLeft + 76 + l * 24 - k / 2, this.guiTop + 22 + i * 25, i1, i);
                     this.buttonList.add(powerbutton);
 
                     if (i >= this.tileBeacon.getLevels())
@@ -103,13 +97,13 @@ public class GuiTFCBeacon extends GuiContainer{
             }
 
             byte b0 = 3;
-            j = TETFCBeacon.effectsList[b0].length + 1;
+            j = TETNFCBeacon.effectsList[b0].length + 1;
             k = j * 22 + (j - 1) * 2;
 
             for (l = 0; l < j - 1; ++l)
             {
-                i1 = TETFCBeacon.effectsList[b0][l].id;
-                powerbutton = new GuiTFCBeacon.PowerButton(b0 << 8 | i1, this.guiLeft + 167 + l * 24 - k / 2, this.guiTop + 47, i1, b0);
+                i1 = TETNFCBeacon.effectsList[b0][l].id;
+                powerbutton = new GuiTNFCBeacon.PowerButton(b0 << 8 | i1, this.guiLeft + 167 + l * 24 - k / 2, this.guiTop + 47, i1, b0);
                 this.buttonList.add(powerbutton);
 
                 if (b0 >= this.tileBeacon.getLevels())
@@ -124,7 +118,7 @@ public class GuiTFCBeacon extends GuiContainer{
 
             if (this.tileBeacon.getPrimaryEffect() > 0)
             {
-                GuiTFCBeacon.PowerButton powerbutton1 = new GuiTFCBeacon.PowerButton(b0 << 8 | this.tileBeacon.getPrimaryEffect(), this.guiLeft + 167 + (j - 1) * 24 - k / 2, this.guiTop + 47, this.tileBeacon.getPrimaryEffect(), b0);
+                GuiTNFCBeacon.PowerButton powerbutton1 = new GuiTNFCBeacon.PowerButton(b0 << 8 | this.tileBeacon.getPrimaryEffect(), this.guiLeft + 167 + (j - 1) * 24 - k / 2, this.guiTop + 47, this.tileBeacon.getPrimaryEffect(), b0);
                 this.buttonList.add(powerbutton1);
 
                 if (b0 >= this.tileBeacon.getLevels())
@@ -152,7 +146,7 @@ public class GuiTFCBeacon extends GuiContainer{
             
         	try
             {
-                AbstractPacket pkt = new TFCBeaconPacket(this.tileBeacon.xCoord, this.tileBeacon.yCoord, this.tileBeacon.zCoord, this.tileBeacon.getPrimaryEffect(),this.tileBeacon.getSecondaryEffect() );
+                AbstractPacket pkt = new TNFCBeaconPacket(this.tileBeacon.xCoord, this.tileBeacon.yCoord, this.tileBeacon.zCoord, this.tileBeacon.getPrimaryEffect(),this.tileBeacon.getSecondaryEffect() );
 				TerraFirmaCraft.PACKET_PIPELINE.sendToServer(pkt); 
             }
             catch (Exception exception)
@@ -162,9 +156,9 @@ public class GuiTFCBeacon extends GuiContainer{
 
             this.mc.displayGuiScreen((GuiScreen)null);
         }
-        else if (button instanceof GuiTFCBeacon.PowerButton)
+        else if (button instanceof GuiTNFCBeacon.PowerButton)
         {
-            if (((GuiTFCBeacon.PowerButton)button).func_146141_c())
+            if (((GuiTNFCBeacon.PowerButton)button).func_146141_c())
             {
                 return;
             }
@@ -251,7 +245,7 @@ public class GuiTFCBeacon extends GuiContainer{
             {
                 if (this.visible)
                 {
-                    p_146112_1_.getTextureManager().bindTexture(GuiTFCBeacon.beaconGuiTextures);
+                    p_146112_1_.getTextureManager().bindTexture(GuiTNFCBeacon.beaconGuiTextures);
                     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
                     this.field_146123_n = p_146112_2_ >= this.xPosition && p_146112_3_ >= this.yPosition && p_146112_2_ < this.xPosition + this.width && p_146112_3_ < this.yPosition + this.height;
                     short short1 = 219;
@@ -272,7 +266,7 @@ public class GuiTFCBeacon extends GuiContainer{
 
                     this.drawTexturedModalRect(this.xPosition, this.yPosition, k, short1, this.width, this.height);
 
-                    if (!GuiTFCBeacon.beaconGuiTextures.equals(this.field_146145_o))
+                    if (!GuiTNFCBeacon.beaconGuiTextures.equals(this.field_146145_o))
                     {
                         p_146112_1_.getTextureManager().bindTexture(this.field_146145_o);
                     }
@@ -293,37 +287,37 @@ public class GuiTFCBeacon extends GuiContainer{
         }
 
     @SideOnly(Side.CLIENT)
-    class CancelButton extends GuiTFCBeacon.Button
+    class CancelButton extends GuiTNFCBeacon.Button
     {
 
         public CancelButton(int p_i1074_2_, int p_i1074_3_, int p_i1074_4_)
         {
-            super(p_i1074_2_, p_i1074_3_, p_i1074_4_, GuiTFCBeacon.beaconGuiTextures, 112, 220);
+            super(p_i1074_2_, p_i1074_3_, p_i1074_4_, GuiTNFCBeacon.beaconGuiTextures, 112, 220);
         }
 
         public void func_146111_b(int p_146111_1_, int p_146111_2_)
         {
-            GuiTFCBeacon.this.drawCreativeTabHoveringText(I18n.format("gui.cancel", new Object[0]), p_146111_1_, p_146111_2_);
+            GuiTNFCBeacon.this.drawCreativeTabHoveringText(I18n.format("gui.cancel", new Object[0]), p_146111_1_, p_146111_2_);
         }
     }
 
     @SideOnly(Side.CLIENT) 
-    class ConfirmButton extends GuiTFCBeacon.Button
+    class ConfirmButton extends GuiTNFCBeacon.Button
     {
 
         public ConfirmButton(int p_i1075_2_, int p_i1075_3_, int p_i1075_4_)
         {
-            super(p_i1075_2_, p_i1075_3_, p_i1075_4_, GuiTFCBeacon.beaconGuiTextures, 90, 220);
+            super(p_i1075_2_, p_i1075_3_, p_i1075_4_, GuiTNFCBeacon.beaconGuiTextures, 90, 220);
         }
 
         public void func_146111_b(int p_146111_1_, int p_146111_2_)
         {
-            GuiTFCBeacon.this.drawCreativeTabHoveringText(I18n.format("gui.done", new Object[0]), p_146111_1_, p_146111_2_);
+            GuiTNFCBeacon.this.drawCreativeTabHoveringText(I18n.format("gui.done", new Object[0]), p_146111_1_, p_146111_2_);
         }
     }
 
     @SideOnly(Side.CLIENT)
-    class PowerButton extends GuiTFCBeacon.Button
+    class PowerButton extends GuiTNFCBeacon.Button
     {
         private final int field_146149_p;
         private final int field_146148_q;
@@ -345,7 +339,7 @@ public class GuiTFCBeacon extends GuiContainer{
                 s = s + " II";
             }
 
-            GuiTFCBeacon.this.drawCreativeTabHoveringText(s, p_146111_1_, p_146111_2_);
+            GuiTNFCBeacon.this.drawCreativeTabHoveringText(s, p_146111_1_, p_146111_2_);
         }
     }
 }

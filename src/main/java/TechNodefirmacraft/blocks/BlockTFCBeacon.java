@@ -1,7 +1,7 @@
 package TechNodefirmacraft.blocks;
 
 import TechNodefirmacraft.TechNodefirmacraftCore;
-import TechNodefirmacraft.TileEntities.TETFCBeacon;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.client.gui.inventory.GuiBeacon;
 import net.minecraft.entity.EntityLivingBase;
@@ -27,7 +27,7 @@ public class BlockTFCBeacon extends BlockBeacon {
     @Override
     public TileEntity createNewTileEntity(World world, int foo)
     {
-        return new TETFCBeacon();
+        return new TETNFCBeacon();
     }
     
     /**
@@ -38,7 +38,7 @@ public class BlockTFCBeacon extends BlockBeacon {
     {
         if (is.hasDisplayName())
         {
-            ((TETFCBeacon)world.getTileEntity(x, y, z)).func_145999_a(is.getDisplayName());
+            ((TETNFCBeacon)world.getTileEntity(x, y, z)).setDisplayName(is.getDisplayName());
         }
     }
     
@@ -54,7 +54,7 @@ public class BlockTFCBeacon extends BlockBeacon {
        }
        else
        {
-           TETFCBeacon tebeacon = (TETFCBeacon)world.getTileEntity(x, y, z);
+           TETNFCBeacon tebeacon = (TETNFCBeacon)world.getTileEntity(x, y, z);
 
            if (tebeacon != null)
            {

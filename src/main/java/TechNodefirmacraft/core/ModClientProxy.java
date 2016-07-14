@@ -1,9 +1,15 @@
 package TechNodefirmacraft.core;
 
 import java.io.File;
-import TechNodefirmacraft.core.*;
+
+
+
+import TechNodefirmacraft.TESR.TESRTNFCBeacon;
+import TechNodefirmacraft.TileEntities.TETNFCBeacon;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -88,8 +94,9 @@ public class ModClientProxy extends ModCommonProxy
 	public void registerTileEntities(boolean flag)
 	{
 		super.registerTileEntities(false);
-		
 		// TESR registers
+		ClientRegistry.registerTileEntity(TETNFCBeacon.class, "TETFCBeacon", new TESRTNFCBeacon());
+
 	}
 
 	@Override
