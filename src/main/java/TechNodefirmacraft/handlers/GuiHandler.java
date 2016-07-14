@@ -7,9 +7,9 @@ import net.minecraft.world.World;
 import com.bioxx.tfc.Containers.ContainerTFC;
 
 import TechNodefirmacraft.Containers.ContainerTFCBeacon;
-import TechNodefirmacraft.Containers.GuiTFCBeacon;
 import TechNodefirmacraft.TileEntities.TETFCBeacon;
 import TechNodefirmacraft.core.ModDetails;
+import TechNodefirmacraft.gui.GuiTFCBeacon;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler

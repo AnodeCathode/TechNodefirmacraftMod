@@ -25,7 +25,7 @@ public class BlockTFCBeacon extends BlockBeacon {
      * Returns a new instance of a block's tile entity class. Called on placing the block.
      */
     @Override
-    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+    public TileEntity createNewTileEntity(World world, int foo)
     {
         return new TETFCBeacon();
     }
@@ -46,7 +46,7 @@ public class BlockTFCBeacon extends BlockBeacon {
     * Called upon block activation (right click on the block.)
     */
    @Override
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metadata, float sideX, float sideY, float sideZ)
    {
        if (world.isRemote)
        {

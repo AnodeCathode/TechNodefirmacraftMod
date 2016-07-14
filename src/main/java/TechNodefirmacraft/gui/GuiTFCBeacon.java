@@ -1,4 +1,4 @@
-package TechNodefirmacraft.Containers;
+package TechNodefirmacraft.gui;
 
 import java.util.Iterator;
 
@@ -11,6 +11,7 @@ import com.bioxx.tfc.Handlers.Network.AbstractPacket;
 import com.bioxx.tfc.Handlers.Network.PlayerUpdatePacket;
 import com.bioxx.tfc.api.TFCItems;
 
+import TechNodefirmacraft.Containers.ContainerTFCBeacon;
 import TechNodefirmacraft.TileEntities.TETFCBeacon;
 import TechNodefirmacraft.handlers.network.TFCBeaconPacket;
 import cpw.mods.fml.relauncher.Side;

@@ -1,8 +1,11 @@
 package TechNodefirmacraft.core;
 
+import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -59,7 +62,8 @@ public class ModRecipes
 	
 	private static void registerRecipes()
 	{
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.TFCBeacon, 1), "2 4", "535", "111", '1', "blockPlatinum", '2', "craftingToolHardChisel", '3', "itemNetherStar", '4', "craftingToolHardHammer", '5', "blockGlass"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(
+				new ItemStack(ModBlocks.TFCBeacon, 1), "2 4", "536", "171", '1', new ItemStack(TFCBlocks.metalBlock,1,13), '2', "craftingToolHardChisel", '3', new ItemStack(Items.nether_star,1), '4', "craftingToolHardHammer", '5', "gemExquisiteRuby", '6', "gemExquisiteSapphire", '7', "blockDiamond"));
 	}
 
 
