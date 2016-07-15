@@ -19,6 +19,10 @@ item.Spruce Mixture.name=Spruce Mixture
 item.Jungle Mixture.name=Jungle Mixture
 item.Acacia Mixture.name=Acacia Mixture
 item.Dark Oak Mixture.name=Dark Oak Mixture
+item.record_TfcMusic.name=Music Disc
+item.record.record_TfcMusic.desc=The lovely music from TFC.
+item.record_CigBeer.name=Music Disc
+item.record.record_CigBeer.desc=Cigarettes and Boats - Approaching Nirvana
 
 #=========
 #= Fluids =

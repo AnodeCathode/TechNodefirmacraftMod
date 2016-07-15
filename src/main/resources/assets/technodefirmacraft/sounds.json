@@ -1,0 +1,14 @@
+{
+  "records.record_TfcMusic": {
+    "category": "ambient",
+    "sounds": [
+      {"name": "records/record_TfcMusic", "stream": true}
+    ]
+  },
+    "records.record_CigBeer": {
+    "category": "ambient",
+    "sounds": [
+      {"name": "records/record_CigBeer", "stream": true}
+    ]
+  }
+}

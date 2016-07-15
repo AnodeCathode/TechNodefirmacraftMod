@@ -7,6 +7,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import TechNodefirmacraft.items.ModItemBucket;
+import TechNodefirmacraft.items.TFCRecord;
 
 public class ModItems 
 {
@@ -17,11 +18,20 @@ public class ModItems
 	public static Item BucketJungleMix;
 	public static Item BucketAcaciaMix;
 	public static Item BucketDarkOakMix;
+	public static Item record_TfcMusic;
+	public static Item record_CigBeer;
 	
 	public static void initialise()
 	{
 		System.out.println("[" + ModDetails.ModName + "] Registering Items");
-		
+		BucketOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketOakMix");
+		BucketBirchMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Birch Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketBirchMix");
+		BucketSpruceMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Spruce Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketSpruceMix");
+		BucketJungleMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Jungle Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketJungleMix");
+		BucketAcaciaMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Acacia Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketAcaciaMix");
+		BucketDarkOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Dark Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketDarkOakMix");
+		record_TfcMusic = new TFCRecord("record_TfcMusic").setUnlocalizedName("record_TfcMusic").setTextureName(ModDetails.ModID + ":" + "record_TfcMusic");
+		record_CigBeer = new TFCRecord("record_CigBeer").setUnlocalizedName("record_CigBeer").setTextureName(ModDetails.ModID + ":" + "record_CigBeer");
 		registerItems();
 		
 		System.out.println("[" + ModDetails.ModName + "] Done Registering Items");
@@ -29,18 +39,15 @@ public class ModItems
 	
 	private static void registerItems()
 	{
-		BucketOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketOakMix");
-		BucketBirchMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Birch Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketBirchMix");
-		BucketSpruceMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Spruce Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketSpruceMix");
-		BucketJungleMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Jungle Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketJungleMix");
-		BucketAcaciaMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Acacia Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketAcaciaMix");
-		BucketDarkOakMix = new ModItemBucket(Blocks.air).setUnlocalizedName("Dark Oak Mixture").setContainerItem(Items.bucket).setTextureName(ModDetails.ModID + ":" + "fluidContainers_bucketDarkOakMix");
+
 		GameRegistry.registerItem(BucketOakMix, BucketOakMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketBirchMix, BucketBirchMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketSpruceMix, BucketSpruceMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketJungleMix, BucketJungleMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketAcaciaMix, BucketAcaciaMix.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BucketDarkOakMix, BucketDarkOakMix.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(record_TfcMusic, record_TfcMusic.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(record_CigBeer, record_CigBeer.getUnlocalizedName().substring(5));
 		
 	}
 }
