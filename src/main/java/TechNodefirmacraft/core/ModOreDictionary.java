@@ -222,7 +222,31 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("craftingRedGem", new ItemStack(TFCItems.gemGarnet, 1, WILD));
 		OreDictionary.registerOre("craftingRedGem", new ItemStack(TFCItems.gemAgate, 1, WILD));
 		OreDictionary.registerOre("craftingRedGem", new ItemStack(TFCItems.gemTopaz, 1, WILD));
-
+		//Flawless+ Gems
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemSapphire, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemJasper, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemOpal, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemAmethyst, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemEmerald, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemBeryl, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemJade, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemTourmaline, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemRuby, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemGarnet, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemAgate, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemTopaz, 1, 3));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemSapphire, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemJasper, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemOpal, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemAmethyst, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemEmerald, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemBeryl, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemJade, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemTourmaline, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemRuby, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemGarnet, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemAgate, 1, 4));
+		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemTopaz, 1, 4));
 
 		//Replacement for netherrack: TFC petrified wood
 		OreDictionary.registerOre("stoneNetherrack", new ItemStack(TFCItems.oreChunk, 1, 22));

@@ -1,12 +1,12 @@
 {
   "records.record_TfcMusic": {
-    "category": "ambient",
+    "category": "record",
     "sounds": [
       {"name": "records/record_TfcMusic", "stream": true}
     ]
   },
     "records.record_CigBeer": {
-    "category": "ambient",
+    "category": "record",
     "sounds": [
       {"name": "records/record_CigBeer", "stream": true}
     ]

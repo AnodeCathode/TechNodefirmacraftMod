@@ -83,7 +83,9 @@ public class ModRecipes
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.record_wait, 1), "111", "121", "111", '1', polyetheneItemStack , '2', "gemExquisiteTourmaline"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.record_ward, 1), "111", "121", "111", '1', polyetheneItemStack , '2', "gemExquisiteBeryl"));
 		//Evil new jukebox recipe:
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.jukebox, 1), "123", "456", "789", '1', "gemExquisiteRuby" , '2', "gemExquisiteBeryl", '3',"gemExquisiteAgate",'4',"gemExquisiteAmethyst",'5',"gemExquisiteDiamond",'6',"gemExquisiteEmerald",'7',"gemExquisiteOpal",'8',"gemExquisiteTourmaline",'9',"gemExquisiteJade"));
+		//GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.jukebox, 1), "123", "456", "789", '1', "gemExquisiteRuby" , '2', "gemExquisiteBeryl", '3',"gemExquisiteAgate",'4',"gemExquisiteAmethyst",'5',"gemExquisiteDiamond",'6',"gemExquisiteEmerald",'7',"gemExquisiteOpal",'8',"gemExquisiteTourmaline",'9',"gemExquisiteJade"));
+		// Slightly less evil jukebox recipe:
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.jukebox, 1), "111", "151", "111", '1', "craftingFlawlessPlus" ,'5',"gemExquisiteDiamond"));
 		
 		
 		
