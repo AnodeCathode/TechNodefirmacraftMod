@@ -603,7 +603,6 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Blocks.stonebrick, 1, OreDictionary.WILDCARD_VALUE));
             API.hideItem(new ItemStack(Blocks.melon_block));
             API.hideItem(new ItemStack(Blocks.vine));
-            API.hideItem(new ItemStack(Blocks.web));
             API.hideItem(new ItemStack(Blocks.mycelium));
             API.hideItem(new ItemStack(Blocks.waterlily));
             API.hideItem(new ItemStack(Blocks.end_portal));
