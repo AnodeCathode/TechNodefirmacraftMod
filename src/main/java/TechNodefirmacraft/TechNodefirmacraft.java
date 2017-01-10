@@ -125,7 +125,7 @@ public class TechNodefirmacraft
 	@EventHandler
 	public void postInitialize(FMLPostInitializationEvent e)
 	{
-		ModRecipes.initialise();
+		//ModRecipes.initialise();
 	}
 //	@EventHandler
 //	public void serverLoad(FMLServerStartingEvent event){
