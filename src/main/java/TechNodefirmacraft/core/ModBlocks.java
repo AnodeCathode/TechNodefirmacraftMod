@@ -1,7 +1,11 @@
 package TechNodefirmacraft.core;
 
+import TechNodefirmacraft.blocks.BlockBase;
 import TechNodefirmacraft.blocks.BlockLiquidMix;
 import TechNodefirmacraft.blocks.BlockTFCBeacon;
+import TechNodefirmacraft.blocks.BlockIEDevice;
+import TechNodefirmacraft.items.itemblocks.ItemBlockIEDevice;
+import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
@@ -17,7 +21,7 @@ public class ModBlocks
 	public static Block AcaciaMix;
 	public static Block DarkOakMix;
 	public static Block TFCBeacon;
-	
+	public static Block IEModBlocks;
 
 	
 	public static void initialise()
@@ -31,6 +35,7 @@ public class ModBlocks
 		AcaciaMix = (new BlockLiquidMix(ModFluids.ACACIAMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("AcaciaMix");
 		DarkOakMix = (new BlockLiquidMix(ModFluids.DARKOAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("DarkOakMix");
 		TFCBeacon = (new BlockTFCBeacon().setBlockName("TFCBeacon"));
+		IEModBlocks = (new BlockIEDevice().setHardness(10F).setResistance(2.5F).setStepSound(Block.soundTypeMetal).setBlockName("IEBlocks"));
 		registerBlocks();
 		
 		System.out.println("[" + ModDetails.ModName + "] Done Registering Blocks");
@@ -40,6 +45,6 @@ public class ModBlocks
 	{
 		
 		GameRegistry.registerBlock(TFCBeacon, "TFCBeacon");
-		
+		GameRegistry.registerBlock(IEModBlocks, ItemBlockIEDevice.class, "IEBlocks");
 	}
 }
