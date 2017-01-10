@@ -19,8 +19,6 @@ public class BlockTFCBeacon extends BlockBeacon {
     {
         super();
         setCreativeTab(CreativeTab.TNFC_TAB);
-        
-        
     }
 
     /**
@@ -60,9 +58,8 @@ public class BlockTFCBeacon extends BlockBeacon {
 
            if (tebeacon != null)
            {
-                   player.openGui(TechNodefirmacraft.TechNodefirmacraft.instance, 0, world, x, y, z);
+               player.openGui(TechNodefirmacraft.TechNodefirmacraft.instance, 0, world, x, y, z);
            }
-
            return true;
        }
    }

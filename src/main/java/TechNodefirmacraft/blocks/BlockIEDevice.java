@@ -28,17 +28,10 @@ public class BlockIEDevice extends BlockBase {
     @Override
     public IIcon getIcon(int par1, int par2)
     {
-        for(int i = 0; i < names.length; i++)
-        {
-            if(par2 == i);
-            {
-                if (par1 == 1 || par1 == 0)
-                    return topIcon[i];
-                else
-                    return sideIcon[i];
-            }
-        }
-        return topIcon[0];
+            if (par1 == 1 || par1 == 0)
+                return topIcon[par2];
+            else
+                return sideIcon[par2];
     }
 
     @SideOnly(Side.CLIENT)
@@ -57,8 +50,8 @@ public class BlockIEDevice extends BlockBase {
     public void registerBlockIcons(IIconRegister reg)
     {
         for(int i = 0; i < names.length; i++) {
-            sideIcon[i] = reg.registerIcon(ModDetails.ModID + ":" + names[i] + "Side");
             topIcon[i] = reg.registerIcon(ModDetails.ModID + ":" + names[i] + "Top");
+            sideIcon[i] = reg.registerIcon(ModDetails.ModID + ":" + names[i] + "Side");
         }
     }
 }

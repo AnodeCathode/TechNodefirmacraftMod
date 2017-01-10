@@ -34,7 +34,7 @@ public class ModBlocks
 		JungleMix = (new BlockLiquidMix(ModFluids.JUNGLEMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("JungleMix");
 		AcaciaMix = (new BlockLiquidMix(ModFluids.ACACIAMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("AcaciaMix");
 		DarkOakMix = (new BlockLiquidMix(ModFluids.DARKOAKMIX)).setHardness(100.0F).setLightOpacity(3).setBlockName("DarkOakMix");
-		TFCBeacon = (new BlockTFCBeacon().setBlockName("TFCBeacon"));
+		TFCBeacon = (new BlockTFCBeacon().setBlockName("TFCBeacon").setBlockTextureName("beacon"));
 		IEModBlocks = (new BlockIEDevice().setHardness(10F).setResistance(2.5F).setStepSound(Block.soundTypeMetal).setBlockName("IEBlocks"));
 		registerBlocks();
 		
@@ -43,7 +43,6 @@ public class ModBlocks
 
 	private static void registerBlocks()
 	{
-		
 		GameRegistry.registerBlock(TFCBeacon, "TFCBeacon");
 		GameRegistry.registerBlock(IEModBlocks, ItemBlockIEDevice.class, "IEBlocks");
 	}
