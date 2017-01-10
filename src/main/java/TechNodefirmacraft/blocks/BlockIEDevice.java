@@ -18,8 +18,8 @@ public class BlockIEDevice extends BlockBase {
 
     public BlockIEDevice() {
         super();
-        names = new String[ModReferences.IEBlocks.length];
-        System.arraycopy(ModReferences.IEBlocks, 0, names, 0, 3);
+        names = new String[ModReferences.IEBLOCK.length];
+        System.arraycopy(ModReferences.IEBLOCK, 0, names, 0, 3);
         topIcon = new IIcon[names.length];
         sideIcon = new IIcon[names.length];
     }

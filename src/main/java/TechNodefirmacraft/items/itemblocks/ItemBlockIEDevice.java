@@ -8,7 +8,7 @@ public class ItemBlockIEDevice extends ItemTerraBlock {
     public ItemBlockIEDevice(Block b)
     {
         super(b);
-        metaNames = new String[ModReferences.IEBlocks.length];
-        System.arraycopy(ModReferences.IEBlocks, 0, metaNames, 0, ModReferences.IEBlocks.length);
+        metaNames = new String[ModReferences.IEBLOCK.length];
+        System.arraycopy(ModReferences.IEBLOCK, 0, metaNames, 0, ModReferences.IEBLOCK.length);
     }
 }
