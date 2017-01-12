@@ -166,6 +166,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("tfcApatite", new ItemStack(TFCBlocks.ore4, 1, 5));
 		OreDictionary.registerOre("tfcScapolite", new ItemStack(TFCBlocks.ore4, 1, 6));
 		OreDictionary.registerOre("tfcStrontium", new ItemStack(TFCBlocks.ore4, 1, 7));
+		OreDictionary.registerOre("tfcQuartz", new ItemStack(TFCBlocks.ore4, 1, 8));
 
 		//TFC Tools for use in Crafting
 		//Hammers
