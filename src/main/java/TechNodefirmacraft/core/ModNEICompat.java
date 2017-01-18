@@ -379,7 +379,8 @@ public class ModNEICompat {
                     "kitPickaxe",
                     "ingotCopper",
                     "ingotTin",
-                    "ingotBronze"
+                    "ingotBronze",
+                    "habitatLocator"
             );
             if (Loader.isModLoaded(Forestry)) {
                 for (String forestryStuff : hideForestry) {
