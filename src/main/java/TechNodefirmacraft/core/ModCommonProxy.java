@@ -11,6 +11,7 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import TechNodefirmacraft.TileEntities.TETNFCBeacon;
+import net.minecraftforge.fluids.FluidStack;
 
 
 public class ModCommonProxy
@@ -116,28 +117,50 @@ public class ModCommonProxy
 
 	public void registerFluids()
 	{
-		ModFluids.OAKMIX = new ModFluids("oakmix").setBaseColor(0x00b000);
-		ModFluids.BIRCHMIX = new ModFluids("birchmix").setBaseColor(0x9fe5a1);
-		ModFluids.SPRUCEMIX = new ModFluids("sprucemix").setBaseColor(0x52a267);
-		ModFluids.JUNGLEMIX = new ModFluids("junglemix").setBaseColor(0x5a8108);
-		ModFluids.ACACIAMIX = new ModFluids("acaciamix").setBaseColor(0x7e8108);
-		ModFluids.DARKOAKMIX = new ModFluids("darkoakmix").setBaseColor(0x597a5a);
-
 		FluidRegistry.registerFluid(ModFluids.OAKMIX);
 		FluidRegistry.registerFluid(ModFluids.BIRCHMIX);
 		FluidRegistry.registerFluid(ModFluids.SPRUCEMIX);
 		FluidRegistry.registerFluid(ModFluids.JUNGLEMIX);
 		FluidRegistry.registerFluid(ModFluids.ACACIAMIX);
 		FluidRegistry.registerFluid(ModFluids.DARKOAKMIX);
+
+		FluidRegistry.registerFluid(ModFluids.REGENPOT);
+		FluidRegistry.registerFluid(ModFluids.SWIFTPOT);
+		FluidRegistry.registerFluid(ModFluids.FIRERESPOT);
+		FluidRegistry.registerFluid(ModFluids.POISONPOT);
+		FluidRegistry.registerFluid(ModFluids.HEALTHPOT);
+		FluidRegistry.registerFluid(ModFluids.NIGHTVISIONPOT);
+		FluidRegistry.registerFluid(ModFluids.WEAKNESSPOT);
+		FluidRegistry.registerFluid(ModFluids.STRPOT);
+		FluidRegistry.registerFluid(ModFluids.SLOWPOT);
+		FluidRegistry.registerFluid(ModFluids.HARMPOT);
+		FluidRegistry.registerFluid(ModFluids.WATERBREATHINGPOT);
+		FluidRegistry.registerFluid(ModFluids.INVISIBILITYPOT);
+
+
 	}
 	public void setupFluids()
 	{
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.OAKMIX.getName()), new ItemStack(ModItems.BucketOakMix), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.BIRCHMIX.getName()), new ItemStack(ModItems.BucketBirchMix), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.SPRUCEMIX.getName()), new ItemStack(ModItems.BucketSpruceMix), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.JUNGLEMIX.getName()), new ItemStack(ModItems.BucketJungleMix), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.ACACIAMIX.getName()), new ItemStack(ModItems.BucketAcaciaMix), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluid(ModFluids.DARKOAKMIX.getName()), new ItemStack(ModItems.BucketDarkOakMix), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.OAKMIX, 250), new ItemStack(ModItems.BottleOakMix), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.BIRCHMIX, 250), new ItemStack(ModItems.BottleBirchMix), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.SPRUCEMIX, 250), new ItemStack(ModItems.BottleSpruceMix), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.JUNGLEMIX, 250), new ItemStack(ModItems.BottleJungleMix), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.ACACIAMIX, 250), new ItemStack(ModItems.BottleAcaciaMix), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.DARKOAKMIX, 250), new ItemStack(ModItems.BottleDarkOakMix), new ItemStack(Items.glass_bottle));
+
+
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.REGENPOT, 250), new ItemStack(ModItems.BottleRegenPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.SWIFTPOT, 250), new ItemStack(ModItems.BottleSwiftPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.FIRERESPOT, 250), new ItemStack(ModItems.BottleFireResPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.POISONPOT, 250), new ItemStack(ModItems.BottlePoisonPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.HEALTHPOT, 250), new ItemStack(ModItems.BottleHealthPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.NIGHTVISIONPOT, 250), new ItemStack(ModItems.BottleNightVisionPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.WEAKNESSPOT, 250), new ItemStack(ModItems.BottleWeaknessPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.STRPOT, 250), new ItemStack(ModItems.BottleStrPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.SLOWPOT, 250), new ItemStack(ModItems.BottleSlowPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.HARMPOT, 250), new ItemStack(ModItems.BottleHarmPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.WATERBREATHINGPOT, 250), new ItemStack(ModItems.BottleWaterBreathingPot), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.INVISIBILITYPOT, 250), new ItemStack(ModItems.BottleInvisibilityPot), new ItemStack(Items.glass_bottle));
 	}
 	
 	public void registerFluidIcons()
