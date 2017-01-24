@@ -28,6 +28,8 @@ public class ModFluids extends Fluid {
 	public static final Fluid WATERBREATHINGPOT = new ModFluids("waterbreathingpot").setBaseColor(0x2d5197);
 	public static final Fluid INVISIBILITYPOT = new ModFluids("invisibilitypot").setBaseColor(0x7d8190);
 
+	public static final Fluid ENERGIZINGFLUID = new ModFluids("energizingfluid").setBaseColor(0x2ccdb1);
+	public static final Fluid EXTENDINGFLUID = new ModFluids("extendingfluid").setBaseColor(0xffa300);
 
 
 	public ModFluids(String fluidName) {

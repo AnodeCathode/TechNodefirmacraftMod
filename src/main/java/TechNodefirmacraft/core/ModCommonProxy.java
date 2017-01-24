@@ -136,7 +136,8 @@ public class ModCommonProxy
 		FluidRegistry.registerFluid(ModFluids.HARMPOT);
 		FluidRegistry.registerFluid(ModFluids.WATERBREATHINGPOT);
 		FluidRegistry.registerFluid(ModFluids.INVISIBILITYPOT);
-
+		FluidRegistry.registerFluid(ModFluids.ENERGIZINGFLUID);
+		FluidRegistry.registerFluid(ModFluids.EXTENDINGFLUID);
 
 	}
 	public void setupFluids()
@@ -161,7 +162,8 @@ public class ModCommonProxy
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.HARMPOT, 250), new ItemStack(ModItems.BottleHarmPot), new ItemStack(Items.glass_bottle));
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.WATERBREATHINGPOT, 250), new ItemStack(ModItems.BottleWaterBreathingPot), new ItemStack(Items.glass_bottle));
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.INVISIBILITYPOT, 250), new ItemStack(ModItems.BottleInvisibilityPot), new ItemStack(Items.glass_bottle));
-	}
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.ENERGIZINGFLUID, 250), new ItemStack(ModItems.BottleEnergizingFluid), new ItemStack(Items.glass_bottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(ModFluids.EXTENDINGFLUID, 250), new ItemStack(ModItems.BottleExtendingFluid), new ItemStack(Items.glass_bottle));	}
 	
 	public void registerFluidIcons()
 	{

@@ -31,6 +31,8 @@ public class ModItems
 	public static Item BottleHarmPot;
 	public static Item BottleWaterBreathingPot;
 	public static Item BottleInvisibilityPot;
+	public static Item BottleEnergizingFluid;
+	public static Item BottleExtendingFluid;
 	public static Item record_TfcMusic;
 	public static Item record_CigBeer;
 	public static Item blackSteelShears;
@@ -60,6 +62,8 @@ public class ModItems
 		BottleHarmPot = new ModItemBottle().setUnlocalizedName("Potion of Harming").setCreativeTab(CreativeTab.TNFC_TAB);
 		BottleWaterBreathingPot = new ModItemBottle().setUnlocalizedName("Water Breathing Potion").setCreativeTab(CreativeTab.TNFC_TAB);
 		BottleInvisibilityPot = new ModItemBottle().setUnlocalizedName("Potion of Invisibility").setCreativeTab(CreativeTab.TNFC_TAB);
+		BottleEnergizingFluid = new ModItemBottle().setUnlocalizedName("Energizing Fluid").setCreativeTab(CreativeTab.TNFC_TAB);
+		BottleExtendingFluid = new ModItemBottle().setUnlocalizedName("ExtendingFluid").setCreativeTab(CreativeTab.TNFC_TAB);
 		record_TfcMusic = new TFCRecord("record_TfcMusic").setUnlocalizedName("record_TfcMusic").setTextureName(ModDetails.ModID + ":" + "record_TfcMusic");
 		record_CigBeer = new TFCRecord("record_CigBeer").setUnlocalizedName("record_CigBeer").setTextureName(ModDetails.ModID + ":" + "record_CigBeer");
 		blackSteelShears = new ItemTNFCShears().setUnlocalizedName("shearsBlackSteel");
@@ -93,6 +97,8 @@ public class ModItems
 		GameRegistry.registerItem(BottleHarmPot, BottleHarmPot.getUnlocalizedName());
 		GameRegistry.registerItem(BottleWaterBreathingPot, BottleWaterBreathingPot.getUnlocalizedName());
 		GameRegistry.registerItem(BottleInvisibilityPot, BottleInvisibilityPot.getUnlocalizedName());
+		GameRegistry.registerItem(BottleEnergizingFluid, BottleEnergizingFluid.getUnlocalizedName());
+		GameRegistry.registerItem(BottleExtendingFluid, BottleExtendingFluid.getUnlocalizedName());
 		GameRegistry.registerItem(record_TfcMusic, record_TfcMusic.getUnlocalizedName());
 		GameRegistry.registerItem(record_CigBeer, record_CigBeer.getUnlocalizedName());
 		GameRegistry.registerItem(blackSteelShears, blackSteelShears.getUnlocalizedName());
