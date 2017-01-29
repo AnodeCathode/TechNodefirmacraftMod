@@ -19,6 +19,22 @@ item.Spruce Mixture.name=Spruce Mixture
 item.Jungle Mixture.name=Jungle Mixture
 item.Acacia Mixture.name=Acacia Mixture
 item.Dark Oak Mixture.name=Dark Oak Mixture
+
+item.Regeneration Potion.name=Inactive Potion of Regeneration
+item.Speed Potion.name=Inactive Potion of Swiftness
+item.Fire Resistance Potion.name=Inactive Potion of Fire Resistance
+item.Poison Potion.name=Inactive Potion of Poison
+item.Health Potion.name=Inactive Potion of Instant Health
+item.Night Vision Potion.name=Inactive Potion of Night Vision
+item.Weakness Potion.name=Inactive Potion of Weakness
+item.Strength Potion.name=Inactive Potion of Strength
+item.Slowness Potion.name=Inactive Potion of Slowness
+item.Potion of Harming.name=Inactive Potion of Harming
+item.Water Breathing Potion.name=Inactive Potion of Water Breathing
+item.Potion of Invisibility.name=Inactive Potion of Invisibility
+item.Energizing Fluid.name=Potion Energizer
+item.ExtendingFluid.name=Potion Extender
+
 item.record_TfcMusic.name=Music Disc
 item.record.record_TfcMusic.desc=The lovely music from TFC.
 item.record_CigBeer.name=Music Disc
@@ -71,6 +87,20 @@ fluid.sprucemix=Spruce Mixture
 fluid.junglemix=Jungle Mixture
 fluid.acaciamix=Acacia Mixture
 fluid.darkoakmix=Dark Oak Mixture
+fluid.regenpot=Inactive Potion of Regeneration
+fluid.swiftpot=Inactive Potion of Swiftness
+fluid.firerespot=Inactive Potion of Fire Resistance
+fluid.poisonpot=Inactive Potion of Poison
+fluid.healthpot=Inactive Potion of Instant Health
+fluid.nightvisionpot=Inactive Potion of Night Vision
+fluid.weaknesspot=Inactive Potion of Weakness
+fluid.strpot=Inactive Potion of Strength
+fluid.slowpot=Inactive Potion of Slowness
+fluid.harmpot=Inactive Potion of Harming
+fluid.waterbreathingpot=Inactive Potion of Water Breathing
+fluid.invisibilitypot=Inactive Potion of Invisibility
+fluid.energizingfluid=Potion Energizer
+fluid.extendingfluid=Potion Extender
 
 #=======
 #= GUI =
