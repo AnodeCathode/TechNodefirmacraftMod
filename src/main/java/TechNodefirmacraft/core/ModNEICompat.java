@@ -380,7 +380,10 @@ public class ModNEICompat {
                     "ingotCopper",
                     "ingotTin",
                     "ingotBronze",
-                    "habitatLocator"
+                    "habitatLocator",
+                    "decayingWheat",
+                    "mouldyWheat"
+
             );
             if (Loader.isModLoaded(Forestry)) {
                 for (String forestryStuff : hideForestry) {
@@ -412,6 +415,10 @@ public class ModNEICompat {
                 Item fungiForestry = GameRegistry.findItem(Forestry, "mushroom");
                 if (fungiForestry != null) {
                     API.hideItem(new ItemStack(fungiForestry, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item factoryForestry = GameRegistry.findItem(Forestry, "factory");
+                if (factoryForestry != null) {
+                    API.hideItem(new ItemStack(factoryForestry, 1, 4));
                 }
             }
             //PneumaticCraft

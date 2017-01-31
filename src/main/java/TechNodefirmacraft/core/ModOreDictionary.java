@@ -110,7 +110,17 @@ public class ModOreDictionary {
         OreDictionary.registerOre("foodDairy", new ItemStack(TFCItems.cheese, 1, WILD));
         OreDictionary.registerOre("foodDairy", new ItemStack(TFCItems.woodenBucketMilk, 1, WILD));
 
-        //Anvils
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.beer, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.cider, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.rum, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.ryeWhiskey, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.sake, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.vodka, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.whiskey, 1));
+		OreDictionary.registerOre("foodAlcohol", new ItemStack(TFCItems.cornWhiskey, 1));
+
+
+		//Anvils
 		OreDictionary.registerOre("anvilTier2", new ItemStack(TFCBlocks.anvil, 1, 1));
 		OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil, 1, 2));
         OreDictionary.registerOre("anvilTier3", new ItemStack(TFCBlocks.anvil2, 1, 0));
