@@ -52,8 +52,8 @@ public class ModRecipes
 		
 		System.out.println("[" + ModDetails.ModName + "] Registering Anvil Recipes");
 		
-		registerAnvilPlans();
-		registerAnvilRecipes();
+		//registerAnvilPlans();
+		//registerAnvilRecipes();
 		
 		System.out.println("[" + ModDetails.ModName + "] Done Registering Anvil Recipes");
 	}
@@ -97,27 +97,27 @@ public class ModRecipes
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 0), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 14), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 1),
 				'C', new ItemStack(TFCBlocks.sapling, 1, 13), 'D', new ItemStack(TFCBlocks.sapling, 1, 11),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 1), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 2), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 8),
-				'C', new ItemStack(TFCBlocks.sapling, 1, 7), 'D', new ItemStack(TFCBlocks.sapling, 1, 1),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'C', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 7), 'D', new ItemStack(TFCBlocks.sapling, 1, 1),
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 2), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 3), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 4),
 				'C', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 2), 'D', new ItemStack(TFCBlocks.sapling, 1, 5),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 3), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 4), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 6),
 				'C', new ItemStack(TFCBlocks.sapling, 1, 9), 'D', new ItemStack(TFCBlocks.sapling, 1, 7),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 4), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 0), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 0),
 				'C', new ItemStack(TFCBlocks.sapling, 1, 3), 'D', new ItemStack(TFCBlocks.sapling, 1, 6),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 5), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 10), 'B', new ItemStack(TFCBlocks.sapling, 1, 12),
 				'C', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 5), 'D', new ItemStack(TFCBlocks.sapling, 1, 8),
-				'S', new ItemStack(ModItems.blackSteelShears, 1, WILD)));
+				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 	}
 	private static void registerBarrelRecipes() {
 		BarrelManager.getInstance().addRecipe(new BarrelRecipe(new ItemStack(ModItems.mulch, 1, 0), new FluidStack(TFCFluids.FRESHWATER, 1000), null, new FluidStack(ModFluids.ACACIAMIX, 1000), 24).setMinTechLevel(1).setSealedRecipe(true).setRemovesLiquid(false).setAllowAnyStack(true));

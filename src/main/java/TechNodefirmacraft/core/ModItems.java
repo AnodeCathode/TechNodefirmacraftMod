@@ -2,10 +2,7 @@ package TechNodefirmacraft.core;
 
 
 import TechNodefirmacraft.items.ItemBase;
-import TechNodefirmacraft.items.ItemTNFCShears;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import TechNodefirmacraft.items.ModItemBottle;
 import TechNodefirmacraft.items.TFCRecord;
@@ -35,7 +32,6 @@ public class ModItems
 	public static Item BottleExtendingFluid;
 	public static Item record_TfcMusic;
 	public static Item record_CigBeer;
-	public static Item blackSteelShears;
 	public static Item mulch;
 	public static Item mold;
 	public static Item amalgam;
@@ -66,7 +62,6 @@ public class ModItems
 		BottleExtendingFluid = new ModItemBottle().setUnlocalizedName("ExtendingFluid").setCreativeTab(CreativeTab.TNFC_TAB);
 		record_TfcMusic = new TFCRecord("record_TfcMusic").setUnlocalizedName("record_TfcMusic").setTextureName(ModDetails.ModID + ":" + "record_TfcMusic");
 		record_CigBeer = new TFCRecord("record_CigBeer").setUnlocalizedName("record_CigBeer").setTextureName(ModDetails.ModID + ":" + "record_CigBeer");
-		blackSteelShears = new ItemTNFCShears().setUnlocalizedName("shearsBlackSteel");
 		mulch = new ItemBase().setMetaNames(ModReferences.MULCH).setUnlocalizedName("mulch");
 		mold = new ItemBase().setMetaNames(ModReferences.MOLD).setUnlocalizedName("mold");
 		amalgam = new ItemBase().setMetaNames(ModReferences.AMALGAM).setUnlocalizedName("amalgam");
@@ -101,7 +96,6 @@ public class ModItems
 		GameRegistry.registerItem(BottleExtendingFluid, BottleExtendingFluid.getUnlocalizedName());
 		GameRegistry.registerItem(record_TfcMusic, record_TfcMusic.getUnlocalizedName());
 		GameRegistry.registerItem(record_CigBeer, record_CigBeer.getUnlocalizedName());
-		GameRegistry.registerItem(blackSteelShears, blackSteelShears.getUnlocalizedName());
 		GameRegistry.registerItem(mulch, mulch.getUnlocalizedName());
 		GameRegistry.registerItem(mold, mold.getUnlocalizedName());
 		GameRegistry.registerItem(amalgam, amalgam.getUnlocalizedName());
