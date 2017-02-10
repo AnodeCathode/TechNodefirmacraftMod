@@ -268,7 +268,7 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("craftingFlawlessPlus", new ItemStack(TFCItems.gemTopaz, 1, 4));
 
 		//Replacement for netherrack: TFC petrified wood
-		OreDictionary.registerOre("stoneNetherrack", new ItemStack(TFCItems.oreChunk, 1, 22));
+		OreDictionary.registerOre("stoneNetherrack", new ItemStack(TFCItems.oreMineralChunk, 1, 6));
 		OreDictionary.registerOre("stoneNetherrack", new ItemStack(Blocks.netherrack, 1, WILD));
 
         //Replacement for BlazeRods(Renamed Strontium)
