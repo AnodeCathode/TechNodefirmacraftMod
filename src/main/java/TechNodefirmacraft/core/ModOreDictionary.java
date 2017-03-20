@@ -1,18 +1,13 @@
 package TechNodefirmacraft.core;
 
-import com.bioxx.tfc.Items.ItemMetalSheet;
-import com.bioxx.tfc.api.TFCItems;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.registry.GameData;
-
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.registry.GameData;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 
 public class ModOreDictionary {
@@ -161,12 +156,12 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("tfcPetrifiedWood", new ItemStack(TFCBlocks.ore3, 1, 6));
 		OreDictionary.registerOre("tfcSulfur", new ItemStack(TFCBlocks.ore3, 1, 7));
 		OreDictionary.registerOre("tfcJet", new ItemStack(TFCBlocks.ore3, 1, 8));
-		OreDictionary.registerOre("tfcMicrocline", new ItemStack(TFCBlocks.ore2, 1, 9));
-		OreDictionary.registerOre("tfcPitchBlende", new ItemStack(TFCBlocks.ore2, 1, 10));
-		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.ore2, 1, 11));
-		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.ore2, 1, 12));
-		OreDictionary.registerOre("tfcSaltpeter", new ItemStack(TFCBlocks.ore2, 1, 13));
-		OreDictionary.registerOre("tfcSerpentine", new ItemStack(TFCBlocks.ore2, 1, 14));
+		OreDictionary.registerOre("tfcMicrocline", new ItemStack(TFCBlocks.ore3, 1, 9));
+		OreDictionary.registerOre("tfcPitchBlende", new ItemStack(TFCBlocks.ore3, 1, 10));
+		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.ore3, 1, 11));
+		OreDictionary.registerOre("tfcRedstone", new ItemStack(TFCBlocks.ore3, 1, 12));
+		OreDictionary.registerOre("tfcSaltpeter", new ItemStack(TFCBlocks.ore3, 1, 13));
+		OreDictionary.registerOre("tfcSerpentine", new ItemStack(TFCBlocks.ore3, 1, 14));
 		OreDictionary.registerOre("tfcBorax", new ItemStack(TFCBlocks.ore3, 1, 15));
 		OreDictionary.registerOre("tfcCoal", new ItemStack(TFCBlocks.ore4, 1, 0));
 		OreDictionary.registerOre("tfcCoal", new ItemStack(TFCBlocks.ore4, 1, 1));
