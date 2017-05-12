@@ -112,7 +112,7 @@ public class ModRecipes
 				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 4), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 0), 'B', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 0),
-				'C', new ItemStack(TFCBlocks.sapling, 1, 3), 'D', new ItemStack(TFCBlocks.sapling, 1, 6),
+				'C', new ItemStack(TFCBlocks.fruitTreeSapling, 1, 3), 'D', new ItemStack(TFCBlocks.sapling, 1, 6),
 				'S', new ItemStack(TFCItems.shearsBlackSteel, 1, WILD)));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mulch, 1, 5), "ABA", "CSC", "DBD",
 				'A', new ItemStack(TFCBlocks.sapling, 1, 10), 'B', new ItemStack(TFCBlocks.sapling, 1, 12),
