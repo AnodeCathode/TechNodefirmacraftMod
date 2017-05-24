@@ -2,7 +2,7 @@
 #This is the Main language configuration file
 #
 #If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
-#To create the § symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#To create the ï¿½ symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
 #This file needs to be UTF-8 encoded to work with MC 1.7+
 
 #==========
@@ -19,10 +19,64 @@ item.Spruce Mixture.name=Spruce Mixture
 item.Jungle Mixture.name=Jungle Mixture
 item.Acacia Mixture.name=Acacia Mixture
 item.Dark Oak Mixture.name=Dark Oak Mixture
+
+item.Regeneration Potion.name=Inactive Potion of Regeneration
+item.Speed Potion.name=Inactive Potion of Swiftness
+item.Fire Resistance Potion.name=Inactive Potion of Fire Resistance
+item.Poison Potion.name=Inactive Potion of Poison
+item.Health Potion.name=Inactive Potion of Instant Health
+item.Night Vision Potion.name=Inactive Potion of Night Vision
+item.Weakness Potion.name=Inactive Potion of Weakness
+item.Strength Potion.name=Inactive Potion of Strength
+item.Slowness Potion.name=Inactive Potion of Slowness
+item.Potion of Harming.name=Inactive Potion of Harming
+item.Water Breathing Potion.name=Inactive Potion of Water Breathing
+item.Potion of Invisibility.name=Inactive Potion of Invisibility
+item.Energizing Fluid.name=Potion Energizer
+item.ExtendingFluid.name=Potion Extender
+
 item.record_TfcMusic.name=Music Disc
 item.record.record_TfcMusic.desc=The lovely music from TFC.
 item.record_CigBeer.name=Music Disc
 item.record.record_CigBeer.desc=Cigarettes and Boats - Approaching Nirvana
+
+item.shearsBlackSteel.name=Black Steel Shears
+
+item.mold.mold_pick.name=Metal Press Mold: Pick
+item.mold.mold_propick.name=Metal Press Mold: ProPick
+item.mold.mold_shovel.name=Metal Press Mold: Shovel
+item.mold.mold_axe.name=Metal Press Mold: Axe
+item.mold.mold_hammer.name=Metal Press Mold: Hammer
+item.mold.mold_chisel.name=Metal Press Mold: Chisel
+item.mold.mold_hoe.name=Metal Press Mold: Hoe
+item.mold.mold_mace.name=Metal Press Mold: Mace
+item.mold.mold_javelin.name=Metal Press Mold: Javelin
+item.mold.mold_saw.name=Metal Press Mold: Saw
+item.mold.mold_sword.name=Metal Press Mold: Sword
+item.mold.mold_scythe.name=Metal Press Mold: Scythe
+item.mold.mold_knife.name=Metal Press Mold: Knife
+item.mold.mold_tuyere.name=Metal Press Mold: Tuyere
+item.mold.mold_doubleIngot.name=Metal Press Mold: Double Ingot
+item.mold.mold_blank.name=Metal Press Mold: Blank
+item.mold.mold_block.name=Metal Press Mold: Block
+item.mold.mold_bucket.name=Metal Press Mold: Bucket
+item.mold.mold_grill.name=Metal Press Mold: Grill
+item.mold.mold_hopper.name=Metal Press Mold: Hopper
+item.mold.mold_shears.name=Metal Press Mold: Shears
+item.mold.mold_lanternCore.name=Metal Press Mold: Lantern Core
+
+item.mulch.mulchAcacia.name=Acacia Mulch
+item.mulch.mulchBirch.name=Birch Mulch
+item.mulch.mulchDarkOak.name=Dark Oak Mulch
+item.mulch.mulchJungle.name=Jungle Mulch
+item.mulch.mulchOak.name=Oak Mulch
+item.mulch.mulchSpruce.name=Spruce Mulch
+
+item.amalgam.HCBlackSteelAmalgam.name=High Carbon Black Steel Amalgam
+item.amalgam.HCBlueSteelAmalgam.name=High Carbon Blue Steel Amalgam
+item.amalgam.HCRedSteelAmalgam.name=High Carbon Red Steel Amalgam
+
+item.tinyDiamondDust.name=Tiny Diamond Dust
 
 #=========
 #= Fluids =
@@ -33,6 +87,20 @@ fluid.sprucemix=Spruce Mixture
 fluid.junglemix=Jungle Mixture
 fluid.acaciamix=Acacia Mixture
 fluid.darkoakmix=Dark Oak Mixture
+fluid.regenpot=Inactive Potion of Regeneration
+fluid.swiftpot=Inactive Potion of Swiftness
+fluid.firerespot=Inactive Potion of Fire Resistance
+fluid.poisonpot=Inactive Potion of Poison
+fluid.healthpot=Inactive Potion of Instant Health
+fluid.nightvisionpot=Inactive Potion of Night Vision
+fluid.weaknesspot=Inactive Potion of Weakness
+fluid.strpot=Inactive Potion of Strength
+fluid.slowpot=Inactive Potion of Slowness
+fluid.harmpot=Inactive Potion of Harming
+fluid.waterbreathingpot=Inactive Potion of Water Breathing
+fluid.invisibilitypot=Inactive Potion of Invisibility
+fluid.energizingfluid=Potion Energizer
+fluid.extendingfluid=Potion Extender
 
 #=======
 #= GUI =
@@ -43,6 +111,9 @@ fluid.darkoakmix=Dark Oak Mixture
 #= Strings =
 #===========
 tile.TFCBeacon.name=Beacon
+tile.IEBlocks.BFCasing.name=Blast Furnace Casing
+tile.IEBlocks.BFCore.name=Blast Furnace Core
+tile.IEBlocks.RawHempcrete.name=Uncured Hempcrete
 
 #========
 #= Misc =

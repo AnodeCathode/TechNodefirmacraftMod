@@ -13,6 +13,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ModNEICompat {
 
+    public static final int WILD = OreDictionary.WILDCARD_VALUE;
+
     public static void hideNEIItems() {
         if (ModOptions.enableNEIHiding) {
             //Streams
@@ -256,8 +258,26 @@ public class ModNEICompat {
                     API.hideItem(new ItemStack(basicBlock, 1, 12));
                     API.hideItem(new ItemStack(basicBlock, 1, 13));
                 }
+                Item dustMek = GameRegistry.findItem(Mek, "Dust");
+                if (dustMek != null) {
+                    API.hideItem(new ItemStack(dustMek, 1, 0));
+                    API.hideItem(new ItemStack(dustMek, 1, 1));
+                    API.hideItem(new ItemStack(dustMek, 1, 2));
+                    API.hideItem(new ItemStack(dustMek, 1, 3));
+                    API.hideItem(new ItemStack(dustMek, 1, 4));
+                    API.hideItem(new ItemStack(dustMek, 1, 5));
+                    API.hideItem(new ItemStack(dustMek, 1, 6));
+                    API.hideItem(new ItemStack(dustMek, 1, 7));
+                    API.hideItem(new ItemStack(dustMek, 1, 8));
+                    API.hideItem(new ItemStack(dustMek, 1, 9));
+                    API.hideItem(new ItemStack(dustMek, 1, 10));
+                    API.hideItem(new ItemStack(dustMek, 1, 11));
+                    API.hideItem(new ItemStack(dustMek, 1, 12));
+
+                }
                 Item ingotMek = GameRegistry.findItem(Mek, "Ingot");
                 if (ingotMek != null) {
+                    API.hideItem(new ItemStack(ingotMek, 1, 1));
                     API.hideItem(new ItemStack(ingotMek, 1, 2));
                     API.hideItem(new ItemStack(ingotMek, 1, 4));
                     API.hideItem(new ItemStack(ingotMek, 1, 5));
@@ -265,6 +285,7 @@ public class ModNEICompat {
                 }
                 Item sulfurMek = GameRegistry.findItem(Mek, "OtherDust");
                 if (sulfurMek != null) {
+                    API.hideItem(new ItemStack(sulfurMek, 1, 1));
                     API.hideItem(new ItemStack(sulfurMek, 1, 3));
                 }
                 Item balloonMek = GameRegistry.findItem(Mek, "Balloon");
@@ -314,6 +335,7 @@ public class ModNEICompat {
                 Item metalIE = GameRegistry.findItem(IE, "metal");
                 if (metalIE != null) {
                     API.hideItem(new ItemStack(metalIE, 1, 0));
+                    API.hideItem(new ItemStack(metalIE, 1, 1));
                     API.hideItem(new ItemStack(metalIE, 1, 2));
                     API.hideItem(new ItemStack(metalIE, 1, 3));
                     API.hideItem(new ItemStack(metalIE, 1, 4));
@@ -323,9 +345,12 @@ public class ModNEICompat {
                     API.hideItem(new ItemStack(metalIE, 1, 8));
                     API.hideItem(new ItemStack(metalIE, 1, 9));
                     API.hideItem(new ItemStack(metalIE, 1, 10));
+                    API.hideItem(new ItemStack(metalIE, 1, 11));
                     API.hideItem(new ItemStack(metalIE, 1, 12));
                     API.hideItem(new ItemStack(metalIE, 1, 13));
                     API.hideItem(new ItemStack(metalIE, 1, 14));
+                    API.hideItem(new ItemStack(metalIE, 1, 15));
+                    API.hideItem(new ItemStack(metalIE, 1, 16));
                     API.hideItem(new ItemStack(metalIE, 1, 21));
                     API.hideItem(new ItemStack(metalIE, 1, 22));
                     API.hideItem(new ItemStack(metalIE, 1, 23));
@@ -354,7 +379,11 @@ public class ModNEICompat {
                     "kitPickaxe",
                     "ingotCopper",
                     "ingotTin",
-                    "ingotBronze"
+                    "ingotBronze",
+                    "habitatLocator",
+                    "decayingWheat",
+                    "mouldyWheat"
+
             );
             if (Loader.isModLoaded(Forestry)) {
                 for (String forestryStuff : hideForestry) {
@@ -386,6 +415,10 @@ public class ModNEICompat {
                 Item fungiForestry = GameRegistry.findItem(Forestry, "mushroom");
                 if (fungiForestry != null) {
                     API.hideItem(new ItemStack(fungiForestry, 1, OreDictionary.WILDCARD_VALUE));
+                }
+                Item factoryForestry = GameRegistry.findItem(Forestry, "factory");
+                if (factoryForestry != null) {
+                    API.hideItem(new ItemStack(factoryForestry, 1, 4));
                 }
             }
             //PneumaticCraft
@@ -603,7 +636,6 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Blocks.stonebrick, 1, OreDictionary.WILDCARD_VALUE));
             API.hideItem(new ItemStack(Blocks.melon_block));
             API.hideItem(new ItemStack(Blocks.vine));
-            API.hideItem(new ItemStack(Blocks.web));
             API.hideItem(new ItemStack(Blocks.mycelium));
             API.hideItem(new ItemStack(Blocks.waterlily));
             API.hideItem(new ItemStack(Blocks.end_portal));
@@ -617,6 +649,9 @@ public class ModNEICompat {
             API.hideItem(new ItemStack(Blocks.enchanting_table));
             API.hideItem(new ItemStack(Blocks.beacon));
             API.hideItem(new ItemStack(Blocks.command_block));
+            API.hideItem(new ItemStack(Blocks.quartz_block, 1, WILD));
+            API.hideItem(new ItemStack(Blocks.quartz_stairs));
+            API.hideItem(new ItemStack(Blocks.stone_slab, 1, 7));
 
             API.hideItem(new ItemStack(Items.flint_and_steel));
             API.hideItem(new ItemStack(Items.apple));

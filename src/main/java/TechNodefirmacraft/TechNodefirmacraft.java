@@ -2,6 +2,7 @@ package TechNodefirmacraft;
 
 import java.io.File;
 
+import TechNodefirmacraft.core.*;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -11,20 +12,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.network.FMLEventChannel;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Handlers.PacketHandler;
-
-import TechNodefirmacraft.core.ModBlocks;
-import TechNodefirmacraft.core.ModCommonProxy;
-import TechNodefirmacraft.core.ModDetails;
-import TechNodefirmacraft.core.ModItems;
-import TechNodefirmacraft.core.ModOreDictionary;
-import TechNodefirmacraft.core.ModRecipes;
 import TechNodefirmacraft.core.player.ModPlayerTracker;
 import TechNodefirmacraft.handlers.ChunkEventHandler;
 import TechNodefirmacraft.handlers.CraftingHandler;
@@ -116,7 +105,8 @@ public class TechNodefirmacraft
 		proxy.registerRenderInformation();
 		ModOreDictionary.register();
 		ModRecipes.initialise();
-		
+		ItemHeat.setupItemHeat();
+
 		// Register WAILA classes
 		proxy.registerWailaClasses();
 		proxy.hideNEIItems();		
@@ -125,7 +115,7 @@ public class TechNodefirmacraft
 	@EventHandler
 	public void postInitialize(FMLPostInitializationEvent e)
 	{
-		ModRecipes.initialise();
+		//ModRecipes.initialise();
 	}
 //	@EventHandler
 //	public void serverLoad(FMLServerStartingEvent event){

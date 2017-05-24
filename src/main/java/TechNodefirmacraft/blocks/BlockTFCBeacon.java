@@ -2,6 +2,7 @@ package TechNodefirmacraft.blocks;
 
 import TechNodefirmacraft.TechNodefirmacraftCore;
 import TechNodefirmacraft.TileEntities.TETNFCBeacon;
+import TechNodefirmacraft.core.CreativeTab;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.client.gui.inventory.GuiBeacon;
 import net.minecraft.entity.EntityLivingBase;
@@ -17,8 +18,7 @@ public class BlockTFCBeacon extends BlockBeacon {
     public BlockTFCBeacon()
     {
         super();
-        
-        
+        setCreativeTab(CreativeTab.TNFC_TAB);
     }
 
     /**
@@ -58,9 +58,8 @@ public class BlockTFCBeacon extends BlockBeacon {
 
            if (tebeacon != null)
            {
-                   player.openGui(TechNodefirmacraft.TechNodefirmacraft.instance, 0, world, x, y, z);
+               player.openGui(TechNodefirmacraft.TechNodefirmacraft.instance, 0, world, x, y, z);
            }
-
            return true;
        }
    }
